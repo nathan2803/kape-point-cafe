@@ -3,9 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kape Point Cafe - Artisan Specialty Coffee, handcrafted beverages, and fresh pastries in a cozy, community-first space in Lucena City.">
+  <meta name="description" content="Kape Point Cafe - Artisan Specialty Coffee, handcrafted single-origin Philippine brews, and fresh pastries in a cozy, community-first space in Lucena City.">
+  <meta name="keywords" content="Kape Point, Lucena City coffee, Philippine specialty coffee, Benguet Arabica, Batangas Liberica, Sagada coffee, artisan roastery, online coffee order">
+  <meta name="author" content="Kape Point Cafe &amp; Roastery">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nathan2803.github.io/kape-point-cafe/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant.cafe">
+  <meta property="og:site_name" content="Kape Point Cafe">
+  <meta property="og:title" content="Kape Point Cafe | Artisan Coffee &amp; Roastery">
+  <meta property="og:description" content="Artisan single-origin Philippine coffee, handcrafted cold brews, and fresh butter pastries in Lucena City.">
+  <meta property="og:url" content="https://nathan2803.github.io/kape-point-cafe/">
+  <meta property="og:image" content="https://nathan2803.github.io/kape-point-cafe/assets/menu-espresso.svg">
+  <meta property="og:locale" content="en_PH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kape Point Cafe | Artisan Coffee &amp; Roastery">
+  <meta name="twitter:description" content="Artisan single-origin Philippine coffee, handcrafted cold brews, and fresh butter pastries in Lucena City.">
+  <meta name="twitter:image" content="https://nathan2803.github.io/kape-point-cafe/assets/menu-espresso.svg">
+
   <title>Kape Point Cafe | Artisan Coffee &amp; Roastery</title>
   <link rel="stylesheet" href="./style.css">
+
+  <!-- Schema.org Structured Data: WebSite with Sitelinks Searchbox -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kape Point Cafe",
+    "url": "https://nathan2803.github.io/kape-point-cafe/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://nathan2803.github.io/kape-point-cafe/order.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema.org Structured Data: CafeOrCoffeeShop & Menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Kape Point Cafe & Roastery",
+    "image": "https://nathan2803.github.io/kape-point-cafe/assets/menu-espresso.svg",
+    "@id": "https://nathan2803.github.io/kape-point-cafe/",
+    "url": "https://nathan2803.github.io/kape-point-cafe/",
+    "telephone": "+63-42-710-8899",
+    "priceRange": "₱₱",
+    "servesCuisine": ["Coffee", "Artisan Pastries", "Breakfast", "Filipino Specialty"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Block 4 Lot 8, Quezon Avenue Extension",
+      "addressLocality": "Lucena City",
+      "addressRegion": "Quezon",
+      "postalCode": "4301",
+      "addressCountry": "PH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.9314,
+      "longitude": 121.6172
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Kape Point Daily Menu",
+      "url": "https://nathan2803.github.io/kape-point-cafe/#menu",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Highland Barako Double",
+          "description": "Double-shot single-origin Batangas Liberica blend with notes of dark cacao, toasted hazelnut, and sweet anise.",
+          "offers": {
+            "@type": "Offer",
+            "price": "120",
+            "priceCurrency": "PHP"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Spanish Caramel Latte",
+          "description": "Steamed oat or fresh milk, sweetened condensed milk drizzle, robust espresso, and a touch of Pangasinan sea salt.",
+          "offers": {
+            "@type": "Offer",
+            "price": "165",
+            "priceCurrency": "PHP"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Slow Drip Cold Brew",
+          "description": "Immersion brewed for 48 hours under chilled temperatures with sweet stone fruit undertones.",
+          "offers": {
+            "@type": "Offer",
+            "price": "150",
+            "priceCurrency": "PHP"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Uji Cloud Matcha Latte",
+          "description": "Whisked first-harvest Japanese ceremonial matcha layered over creamy chilled milk with pure wildflower honey.",
+          "offers": {
+            "@type": "Offer",
+            "price": "175",
+            "priceCurrency": "PHP"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Flaky French Butter Croissant",
+          "description": "Layered with French butter, fermented over 72 hours for an airy honeycomb crumb and golden caramelized crust.",
+          "offers": {
+            "@type": "Offer",
+            "price": "110",
+            "priceCurrency": "PHP"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wild Sourdough Melt",
+          "description": "House-baked rye sourdough packed with smoked ham, aged cheddar, dijon emulsion, and crisp garden arugula.",
+          "offers": {
+            "@type": "Offer",
+            "price": "195",
+            "priceCurrency": "PHP"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Header / Navigation Bar -->
@@ -197,6 +350,18 @@
           <p class="section-subtitle">All drinks are prepared fresh to order. Filter by category below to explore our signature roasts, iced refreshers, and oven-fresh pastries.</p>
         </div>
 
+        <!-- Live In-Site Search Bar -->
+        <div class="menu-search-wrapper" role="search">
+          <div class="menu-search-box">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="home-menu-search" class="menu-search-input" placeholder="Search coffees, cold brews, pastries..." aria-label="Search menu items">
+            <button type="button" id="home-search-clear" class="search-clear-btn" aria-label="Clear menu search" style="display: none;">✕</button>
+          </div>
+        </div>
+
         <!-- Interactive Category Filter Tabs -->
         <div class="menu-filter-bar" role="tablist" aria-label="Menu Categories">
           <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All Items</button>
@@ -320,6 +485,12 @@
               </div>
             </div>
           </article>
+
+          <!-- Empty Search State -->
+          <div id="home-menu-empty" class="menu-empty-state" style="display: none;">
+            <p>No menu items match "<span id="home-empty-query"></span>".</p>
+            <a href="./order.html" class="btn btn-sm btn-secondary">Search Full Online Ordering Catalog →</a>
+          </div>
         </div>
 
         <div class="menu-notice-card">

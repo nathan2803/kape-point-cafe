@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nathan2803.github.io/kape-point-cafe/sitemap.xml

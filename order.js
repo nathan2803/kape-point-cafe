@@ -368,9 +368,38 @@
       this.itemsContainer = document.getElementById('order-grid');
       if (!this.itemsContainer) return;
 
+      // Deep linking via URL query parameters (e.g. ?q=latte or ?category=espresso)
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryParam = urlParams.get('q');
+      const categoryParam = urlParams.get('category');
+
+      if (categoryParam) {
+        this.currentCategory = categoryParam;
+      }
+
+      if (queryParam) {
+        this.searchQuery = queryParam.toLowerCase().trim();
+      }
+
       this.render();
       this.bindFilters();
       this.bindSearch();
+
+      if (queryParam) {
+        const searchInput = document.getElementById('catalog-search');
+        const clearBtn = document.getElementById('search-clear-btn');
+        if (searchInput) searchInput.value = queryParam;
+        if (clearBtn) clearBtn.style.display = 'inline-flex';
+      }
+
+      if (categoryParam) {
+        const filterBtns = document.querySelectorAll('.m3-chip, .order-filter-bar .filter-btn');
+        filterBtns.forEach((b) => {
+          const matches = b.getAttribute('data-category') === categoryParam;
+          b.classList.toggle('active', matches);
+          b.setAttribute('aria-selected', matches ? 'true' : 'false');
+        });
+      }
     },
 
     bindFilters() {

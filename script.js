@@ -164,44 +164,124 @@
   };
 
   /* ==========================================================================
-     4. Menu Filter Manager (Tab Switching & Category Filtering)
+     4. Menu Filter & Search Manager (Interactive Search & Category Filtering)
      ========================================================================== */
   const MenuFilterManager = {
     filterButtons: [],
     menuCards: [],
+    currentCategory: 'all',
+    searchQuery: '',
+    searchInput: null,
+    clearBtn: null,
+    emptyState: null,
+    emptyQuerySpan: null,
 
     init() {
       this.filterButtons = document.querySelectorAll('.filter-btn');
       this.menuCards = document.querySelectorAll('.menu-card');
+      this.searchInput = document.getElementById('home-menu-search');
+      this.clearBtn = document.getElementById('home-search-clear');
+      this.emptyState = document.getElementById('home-menu-empty');
+      this.emptyQuerySpan = document.getElementById('home-empty-query');
 
-      if (!this.filterButtons.length) return;
+      if (!this.filterButtons.length && !this.searchInput) return;
 
+      // Handle Category Tabs
       this.filterButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          const category = btn.getAttribute('data-category');
-          this.setActiveCategory(btn, category);
+          this.currentCategory = btn.getAttribute('data-category') || 'all';
+          this.updateTabs(btn);
+          this.applyFilter();
         });
       });
+
+      // Handle Live Search Input
+      if (this.searchInput) {
+        this.searchInput.addEventListener('input', (e) => {
+          this.searchQuery = e.target.value.toLowerCase().trim();
+          if (this.clearBtn) {
+            this.clearBtn.style.display = this.searchQuery ? 'flex' : 'none';
+          }
+          this.applyFilter();
+        });
+      }
+
+      // Handle Clear Button
+      if (this.clearBtn) {
+        this.clearBtn.addEventListener('click', () => {
+          if (this.searchInput) {
+            this.searchInput.value = '';
+            this.searchInput.focus();
+          }
+          this.searchQuery = '';
+          this.clearBtn.style.display = 'none';
+          this.applyFilter();
+        });
+      }
+
+      // Deep link via query parameters (?q=... or ?category=...)
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryParam = urlParams.get('q');
+      const categoryParam = urlParams.get('category');
+
+      if (categoryParam) {
+        const targetBtn = Array.from(this.filterButtons).find(
+          (b) => b.getAttribute('data-category') === categoryParam
+        );
+        if (targetBtn) {
+          this.currentCategory = categoryParam;
+          this.updateTabs(targetBtn);
+        }
+      }
+
+      if (queryParam) {
+        this.searchQuery = queryParam.toLowerCase().trim();
+        if (this.searchInput) this.searchInput.value = queryParam;
+        if (this.clearBtn) this.clearBtn.style.display = 'flex';
+      }
+
+      if (categoryParam || queryParam) {
+        this.applyFilter();
+      }
     },
 
-    setActiveCategory(activeBtn, category) {
-      // Update Tab state
+    updateTabs(activeBtn) {
       this.filterButtons.forEach((btn) => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
       });
       activeBtn.classList.add('active');
       activeBtn.setAttribute('aria-selected', 'true');
+    },
 
-      // Filter cards
+    applyFilter() {
+      let visibleCount = 0;
+
       this.menuCards.forEach((card) => {
-        const cardCategory = card.getAttribute('data-category');
-        if (category === 'all' || cardCategory === category) {
+        const cardCategory = card.getAttribute('data-category') || '';
+        const cardText = card.textContent.toLowerCase();
+
+        const matchesCategory = this.currentCategory === 'all' || cardCategory === this.currentCategory;
+        const matchesSearch = !this.searchQuery || cardText.includes(this.searchQuery);
+
+        if (matchesCategory && matchesSearch) {
           card.classList.remove('hidden');
+          visibleCount++;
         } else {
           card.classList.add('hidden');
         }
       });
+
+      if (this.emptyState) {
+        if (visibleCount === 0) {
+          this.emptyState.style.display = 'block';
+          if (this.emptyQuerySpan) {
+            this.emptyQuerySpan.textContent = this.searchQuery || this.currentCategory;
+          }
+        } else {
+          this.emptyState.style.display = 'none';
+        }
+      }
     }
   };
 
