@@ -1,0 +1,25 @@
+{
+  "name": "Kape Point Cafe & Roastery",
+  "short_name": "Kape Point",
+  "icons": [
+    {
+      "src": "./favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#B85042",
+  "background_color": "#FAF7F2",
+  "display": "standalone",
+  "start_url": "./index.html"
+}
