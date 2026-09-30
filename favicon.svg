@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient for Terracotta Badge -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C85A48"/>
+      <stop offset="100%" stop-color="#8E2D1D"/>
+    </linearGradient>
+
+    <!-- Warm Golden Roast Gradient -->
+    <linearGradient id="beanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#F5E6D3"/>
+    </linearGradient>
+
+    <!-- Warm Accent Glow -->
+    <radialGradient id="tabGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFD4B2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#C85A48" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .favicon-bg { fill: url(#badgeGrad); }
+    .favicon-ring { stroke: #FFDEC8; stroke-opacity: 0.35; }
+    .cup-body { fill: url(#beanGrad); }
+    .cup-accent { stroke: #8E2D1D; }
+    .steam-line { stroke: #FFFDF9; }
+    .drop-accent { fill: #E7A878; }
+
+    @media (prefers-color-scheme: dark) {
+      .favicon-ring { stroke: #FFE2CC; stroke-opacity: 0.6; }
+      .steam-line { stroke: #FFFFFF; }
+      .drop-accent { fill: #F0BA8E; }
+    }
+  </style>
+
+  <!-- Base Badge with Smooth Squircle Corners -->
+  <rect x="2" y="2" width="60" height="60" rx="17" class="favicon-bg"/>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#tabGlow)"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="15.5" fill="none" stroke-width="1.5" class="favicon-ring"/>
+
+  <!-- Rising Aromatic Steam Waves -->
+  <path d="M26 18 C24 13, 28 10, 26 6" fill="none" class="steam-line" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M34 19 C32 14, 37 11, 35 6" fill="none" class="steam-line" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M42 20 C40 16, 44 13, 42 9" fill="none" class="steam-line" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Coffee Cup Silhouette -->
+  <!-- Cup Handle -->
+  <path d="M40 28 C49 28, 49 42, 40 42" fill="none" stroke="#FFFDF9" stroke-width="4.2" stroke-linecap="round"/>
+
+  <!-- Cup Main Body -->
+  <path d="M16 25 C17 41, 23 48, 32 48 C41 48, 47 41, 48 25 Z" class="cup-body"/>
+
+  <!-- Cup Rim Oval -->
+  <ellipse cx="32" cy="25" rx="16" ry="4" fill="#FFFDF9"/>
+
+  <!-- Espresso Crema Top Layer -->
+  <ellipse cx="32" cy="25" rx="14" ry="3" fill="#8E2D1D"/>
+
+  <!-- Heart / Latte Art Crema Droplet -->
+  <path d="M32 26.5 C30 24.5, 27 24.5, 28.5 23 C29.5 22, 32 23.5, 32 24 C32 23.5, 34.5 22, 35.5 23 C37 24.5, 34 24.5, 32 26.5 Z" fill="#FFFDF9"/>
+
+  <!-- Highland Bean & Drop Emblem on Cup Face -->
+  <g transform="translate(32, 38)">
+    <circle cx="0" cy="0" r="5" fill="#8E2D1D"/>
+    <!-- Curved Split of Coffee Bean -->
+    <path d="M-2.5 -3 C-0.5 -1, -0.5 1, 1.5 3" fill="none" stroke="#FFDEC8" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Golden Harvest Accent Drop -->
+  <circle cx="21" cy="18" r="2.2" class="drop-accent"/>
+</svg>
