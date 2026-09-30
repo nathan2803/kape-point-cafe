@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Cookie body -->
+  <circle cx="100" cy="100" r="48" fill="#C58546"/>
+  <!-- Chunky chocolate chips -->
+  <rect x="75" y="80" width="14" height="12" rx="3" fill="#2C1810" transform="rotate(18 75 80)"/>
+  <rect x="110" y="75" width="15" height="13" rx="3" fill="#2C1810" transform="rotate(-15 110 75)"/>
+  <rect x="95" y="110" width="16" height="14" rx="3" fill="#2C1810" transform="rotate(25 95 110)"/>
+  <rect x="72" y="115" width="13" height="11" rx="2" fill="#2C1810" transform="rotate(-8 72 115)"/>
+  <rect x="122" y="105" width="12" height="11" rx="2" fill="#2C1810" transform="rotate(35 122 105)"/>
+  <!-- Sea salt flakes -->
+  <polygon points="90,95 93,92 96,95 93,98" fill="#FFFFFF" opacity="0.9"/>
+  <polygon points="115,95 118,92 121,95 118,98" fill="#FFFFFF" opacity="0.9"/>
+  <polygon points="85,128 88,125 91,128 88,131" fill="#FFFFFF" opacity="0.9"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Iced Americano glass -->
+  <path d="M72 55 L78 145 C79 155, 121 155, 122 145 L128 55 Z" fill="#2C1810" fill-opacity="0.95" stroke="#E2D4C3" stroke-width="2"/>
+  <!-- Coffee depth grad -->
+  <path d="M74 85 L78 145 C79 155, 121 155, 122 145 L126 85 Z" fill="#1A0D08"/>
+  <ellipse cx="100" cy="58" rx="27" ry="7" fill="#4B2816"/>
+  <!-- Ice cubes -->
+  <rect x="85" y="70" width="20" height="20" rx="4" fill="#FFFFFF" fill-opacity="0.35" transform="rotate(15 85 70)"/>
+  <rect x="98" y="95" width="20" height="20" rx="4" fill="#FFFFFF" fill-opacity="0.3" transform="rotate(-10 98 95)"/>
+  <!-- Straw -->
+  <line x1="88" y1="35" x2="105" y2="135" stroke="#C87D32" stroke-width="4" stroke-linecap="round"/>
+</svg>
