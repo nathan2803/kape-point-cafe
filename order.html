@@ -3,43 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kape Point Cafe - Order handcrafted single-origin coffee and artisan sourdough pastries online for dine-in table delivery or express pickup.">
+  <meta name="description" content="Kape Point Cafe - Material Design 3 Ordering Portal for single-origin Philippine coffee and artisan pastries.">
   <title>Order Online | Kape Point Cafe &amp; Roastery</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="order-page-body">
-  <!-- Ordering Header -->
-  <header class="site-header order-header" id="order-header">
-    <div class="header-container">
-      <div class="order-header-left">
-        <a href="./index.html" class="brand-link" aria-label="Return to Kape Point Cafe Homepage">
-          <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 56" width="180" height="42" fill="none" aria-hidden="true">
-            <g transform="translate(6, 6)">
-              <circle cx="22" cy="22" r="21" fill="var(--color-accent)" fill-opacity="0.15" stroke="var(--color-accent)" stroke-width="1.75"/>
-              <path d="M14 26 C14 16, 30 16, 30 26 C30 33, 14 33, 14 26 Z" fill="var(--color-primary-mark)"/>
-              <path d="M18 20 C22 24, 22 28, 26 32" stroke="var(--color-bg)" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M18 12 C18 9, 21 8, 20 5" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M24 13 C24 10, 27 9, 26 6" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
-            </g>
-            <text x="64" y="29" font-family="Georgia, serif" font-size="21" font-weight="600" fill="var(--color-text)" class="brand-text-name">Kape Point</text>
-            <text x="64" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" letter-spacing="2" fill="var(--color-accent)">ARTISAN CAFE &amp; ROASTERY</text>
+<body class="m3-body order-page-body">
+  <!-- M3 Top App Bar -->
+  <header class="m3-top-app-bar" id="order-header">
+    <div class="m3-app-bar-container">
+      <div class="m3-app-bar-leading">
+        <a href="./index.html" class="m3-icon-button" aria-label="Return to Kape Point Cafe Homepage" title="Back to Homepage">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </a>
-        <a href="./index.html" class="back-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span>Back to Home</span>
+        <a href="./index.html" class="m3-brand-link" aria-label="Kape Point Cafe Home">
+          <svg class="m3-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="180" height="38" fill="none" aria-hidden="true">
+            <g transform="translate(4, 4)">
+              <circle cx="21" cy="21" r="20" fill="var(--md-sys-color-primary)" fill-opacity="0.16" stroke="var(--md-sys-color-primary)" stroke-width="1.75"/>
+              <path d="M13 25 C13 15, 29 15, 29 25 C29 32, 13 32, 13 25 Z" fill="var(--md-sys-color-primary)"/>
+              <path d="M17 19 C21 23, 21 27, 25 31" stroke="var(--md-sys-color-surface)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M17 11 C17 8, 20 7, 19 4" stroke="var(--md-sys-color-primary)" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M23 12 C23 9, 26 8, 25 5" stroke="var(--md-sys-color-primary)" stroke-width="1.6" stroke-linecap="round"/>
+            </g>
+            <text x="58" y="26" font-family="Georgia, serif" font-size="20" font-weight="600" fill="var(--md-sys-color-on-surface)">Kape Point</text>
+            <text x="58" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="500" letter-spacing="2" fill="var(--md-sys-color-primary)">ARTISAN CAFE &amp; ROASTERY</text>
+          </svg>
         </a>
       </div>
 
-      <div class="order-header-right">
+      <div class="m3-app-bar-trailing">
         <!-- Auth User State Container -->
         <div id="auth-header-container">
-          <!-- Populated dynamically by order.js: either Sign In button or User Profile Badge -->
+          <!-- Populated dynamically: M3 User Chip or M3 Tonal Button -->
         </div>
 
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="btn-icon theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <!-- M3 Theme Switch Button -->
+        <button id="theme-toggle" class="m3-icon-button" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -50,305 +52,345 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <!-- Mobile Floating Cart Toggle -->
-        <button id="mobile-cart-toggle" class="btn btn-sm btn-primary mobile-cart-btn" aria-label="View Order Tray">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-          <span class="cart-badge-count" id="mobile-cart-count">0</span>
+        <!-- Mobile Floating Tray Trigger -->
+        <button id="mobile-cart-toggle" class="m3-icon-button m3-cart-trigger" aria-label="View Order Tray">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="m3-badge" id="mobile-cart-count">0</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Ordering Workspace -->
-  <main class="order-main">
-    <div class="container order-layout">
-      <!-- Left Column: Catalog & Menu Browser -->
-      <section class="order-catalog-section" aria-label="Order Menu Catalog">
-        <!-- User Greeting & Rewards Banner -->
-        <div class="rewards-banner" id="rewards-banner">
-          <!-- Injected via order.js based on auth state -->
-        </div>
-
-        <!-- Catalog Toolbar: Search & Category Filter -->
-        <div class="catalog-toolbar">
-          <div class="order-filter-bar" role="tablist" aria-label="Filter Catalog">
-            <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All Items</button>
-            <button class="filter-btn" data-category="espresso" role="tab" aria-selected="false">Espresso &amp; Brews</button>
-            <button class="filter-btn" data-category="cold" role="tab" aria-selected="false">Cold Drinks</button>
-            <button class="filter-btn" data-category="pastry" role="tab" aria-selected="false">Bakes &amp; Pastries</button>
-            <button class="filter-btn" data-category="savory" role="tab" aria-selected="false">Savory Toasties</button>
+  <!-- Main Ordering Content -->
+  <main class="m3-main-content">
+    <div class="m3-page-container">
+      <div class="m3-order-layout">
+        
+        <!-- Left / Catalog Surface -->
+        <section class="m3-catalog-pane" aria-label="Product Catalog">
+          <!-- User Rewards Card -->
+          <div class="rewards-banner" id="rewards-banner">
+            <!-- Dynamically populated M3 Card -->
           </div>
 
-          <div class="catalog-search-wrapper">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="catalog-search" class="catalog-search-input" placeholder="Search drinks, roasts, or bakes..." aria-label="Search menu catalog">
-          </div>
-        </div>
-
-        <!-- Catalog Items Grid -->
-        <div class="order-grid" id="order-grid">
-          <!-- Injected dynamically by order.js from menu database -->
-        </div>
-      </section>
-
-      <!-- Right Column: Interactive Order Tray / Checkout Drawer -->
-      <aside class="order-tray-sidebar" id="order-tray-sidebar" aria-label="Order Tray and Checkout">
-        <div class="tray-container">
-          <div class="tray-header">
-            <h2 class="tray-title">Your Order Tray</h2>
-            <span class="tray-item-counter" id="tray-item-counter">0 items</span>
-          </div>
-
-          <!-- Fulfillment Method Selector -->
-          <div class="fulfillment-box">
-            <label class="fulfillment-label">Fulfillment Service</label>
-            <div class="fulfillment-options" role="radiogroup" aria-label="Fulfillment Type">
-              <label class="fulfillment-pill active">
-                <input type="radio" name="fulfillment" value="dine-in" checked>
-                <span>Dine-In</span>
-              </label>
-              <label class="fulfillment-pill">
-                <input type="radio" name="fulfillment" value="pickup">
-                <span>Express Pick-Up</span>
-              </label>
-              <label class="fulfillment-pill">
-                <input type="radio" name="fulfillment" value="delivery">
-                <span>Lucena Delivery</span>
-              </label>
-            </div>
-
-            <!-- Dynamic Detail Inputs based on fulfillment -->
-            <div class="fulfillment-details" id="fulfillment-details">
-              <div class="form-group" id="table-input-group">
-                <label for="order-table-num">Table Number (optional if seated)</label>
-                <input type="text" id="order-table-num" class="form-input" placeholder="e.g. Table 4">
-              </div>
-              <div class="form-group" id="address-input-group" style="display: none;">
-                <label for="order-address">Delivery Address (Lucena City only)</label>
-                <input type="text" id="order-address" class="form-input" placeholder="House/Bldg No., Street, Barangay">
-              </div>
-            </div>
-          </div>
-
-          <!-- Cart Items List Container -->
-          <div class="tray-items-list" id="tray-items-list">
-            <div class="empty-tray-state">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="empty-icon" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-              <p class="empty-title">Your tray is empty</p>
-              <p class="empty-subtitle">Choose handcrafted beverages or pastries from the menu to start your order.</p>
-            </div>
-          </div>
-
-          <!-- Pricing & Checkout Summary -->
-          <div class="tray-summary">
-            <!-- Tumbler discount perk -->
-            <label class="discount-checkbox-label">
-              <input type="checkbox" id="tumbler-discount-checkbox">
-              <span>Bringing personal travel tumbler (-₱15)</span>
-            </label>
-
-            <div class="summary-line">
-              <span>Subtotal</span>
-              <span id="tray-subtotal">₱0.00</span>
-            </div>
-            <div class="summary-line discount-line" id="discount-row" style="display: none;">
-              <span>Tumbler Discount</span>
-              <span id="tray-discount">-₱15.00</span>
-            </div>
-            <div class="summary-line total-line">
-              <span>Total Payable</span>
-              <span class="total-amount" id="tray-total">₱0.00</span>
-            </div>
-
-            <!-- Points Earning Note -->
-            <p class="points-reward-note" id="points-reward-note">
-              Sign in to earn <strong>10 Kape Points</strong> per ₱100 spent.
-            </p>
-
-            <button id="checkout-btn" class="btn btn-primary btn-block checkout-submit-btn" disabled>
-              Complete Order
+          <!-- M3 Search Bar -->
+          <div class="m3-search-bar">
+            <svg class="m3-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="catalog-search" class="m3-search-input" placeholder="Search coffee, drinks, or bakes..." aria-label="Search menu catalog">
+            <button type="button" class="m3-search-clear-btn" id="search-clear-btn" aria-label="Clear search" style="display: none;">
+              &times;
             </button>
           </div>
-        </div>
-      </aside>
+
+          <!-- M3 Filter Chips Row -->
+          <div class="m3-filter-chips-row order-filter-bar" role="tablist" aria-label="Filter menu items">
+            <button class="m3-chip filter-btn active" data-category="all" role="tab" aria-selected="true">
+              <svg class="m3-chip-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>All Items</span>
+            </button>
+            <button class="m3-chip filter-btn" data-category="espresso" role="tab" aria-selected="false">
+              <svg class="m3-chip-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Espresso &amp; Brews</span>
+            </button>
+            <button class="m3-chip filter-btn" data-category="cold" role="tab" aria-selected="false">
+              <svg class="m3-chip-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Cold Drinks</span>
+            </button>
+            <button class="m3-chip filter-btn" data-category="pastry" role="tab" aria-selected="false">
+              <svg class="m3-chip-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Bakes &amp; Pastries</span>
+            </button>
+            <button class="m3-chip filter-btn" data-category="savory" role="tab" aria-selected="false">
+              <svg class="m3-chip-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Savory Toasties</span>
+            </button>
+          </div>
+
+          <!-- M3 Cards Grid -->
+          <div class="m3-cards-grid" id="order-grid">
+            <!-- Injected by order.js -->
+          </div>
+        </section>
+
+        <!-- Right / M3 Order Tray Surface -->
+        <aside class="m3-tray-pane" id="order-tray-sidebar" aria-label="Order Tray and Checkout">
+          <div class="m3-card m3-card-elevated tray-card">
+            <div class="m3-tray-header">
+              <div>
+                <h2 class="m3-title-large">Your Order Tray</h2>
+                <span class="m3-body-small text-muted" id="tray-item-counter">0 items</span>
+              </div>
+            </div>
+
+            <!-- M3 Segmented Buttons for Fulfillment -->
+            <div class="m3-fulfillment-section">
+              <span class="m3-label-medium">Fulfillment Type</span>
+              <div class="m3-segmented-buttons" role="radiogroup" aria-label="Fulfillment Type">
+                <button type="button" class="m3-segment active" data-value="dine-in" role="radio" aria-checked="true">
+                  <svg class="m3-segment-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Dine-In</span>
+                </button>
+                <button type="button" class="m3-segment" data-value="pickup" role="radio" aria-checked="false">
+                  <svg class="m3-segment-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Express Pick-Up</span>
+                </button>
+                <button type="button" class="m3-segment" data-value="delivery" role="radio" aria-checked="false">
+                  <svg class="m3-segment-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Delivery</span>
+                </button>
+              </div>
+
+              <!-- M3 Outlined Text Field -->
+              <div class="m3-fulfillment-inputs" id="fulfillment-details">
+                <div class="m3-text-field" id="table-input-group">
+                  <input type="text" id="order-table-num" class="m3-text-input" placeholder=" " aria-label="Table Number">
+                  <label for="order-table-num" class="m3-floating-label">Table Number (optional)</label>
+                </div>
+                <div class="m3-text-field" id="address-input-group" style="display: none;">
+                  <input type="text" id="order-address" class="m3-text-input" placeholder=" " aria-label="Delivery Address">
+                  <label for="order-address" class="m3-floating-label">Delivery Address (Lucena City)</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div class="m3-tray-items-container" id="tray-items-list">
+              <!-- Populated by order.js -->
+            </div>
+
+            <!-- Pricing & M3 Switch for Tumbler Discount -->
+            <div class="m3-tray-footer">
+              <!-- Official M3 Switch Component -->
+              <div class="m3-switch-row">
+                <div class="m3-switch-label-group">
+                  <span class="m3-body-medium">Personal Tumbler Perk</span>
+                  <span class="m3-body-small text-muted">Bring reusable mug for ₱15 discount</span>
+                </div>
+                <label class="m3-switch" for="tumbler-discount-checkbox">
+                  <input type="checkbox" id="tumbler-discount-checkbox" class="m3-switch-input" aria-label="Apply reusable tumbler discount">
+                  <span class="m3-switch-track">
+                    <span class="m3-switch-thumb">
+                      <svg class="m3-switch-check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="m3-price-breakdown">
+                <div class="m3-price-row">
+                  <span class="m3-body-medium text-muted">Subtotal</span>
+                  <span class="m3-body-medium" id="tray-subtotal">₱0.00</span>
+                </div>
+                <div class="m3-price-row m3-discount-row" id="discount-row" style="display: none;">
+                  <span class="m3-body-medium">Tumbler Discount</span>
+                  <span class="m3-body-medium text-success" id="tray-discount">-₱15.00</span>
+                </div>
+                <div class="m3-divider"></div>
+                <div class="m3-price-row m3-total-row">
+                  <span class="m3-title-medium">Total Payable</span>
+                  <span class="m3-title-large text-primary" id="tray-total">₱0.00</span>
+                </div>
+              </div>
+
+              <!-- Points Notice -->
+              <p class="m3-body-small m3-reward-caption" id="points-reward-note">
+                Sign in to earn <strong>10 Kape Points</strong> per ₱100 spent.
+              </p>
+
+              <!-- M3 Filled Button -->
+              <button id="checkout-btn" class="m3-button m3-button-filled m3-button-block" disabled>
+                Complete Order
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
   </main>
 
-  <!-- Auth Modal: Sign In / Quick Guest Login -->
+  <!-- M3 Dialog: Auth Sign In / Member Joining -->
   <div class="modal-backdrop" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" aria-hidden="true">
-    <div class="modal-container auth-modal-container">
-      <div class="modal-header">
-        <h2 id="auth-modal-title" class="modal-title">Sign In to Kape Point</h2>
-        <button class="modal-close-btn" id="close-auth-modal-btn" aria-label="Close authentication dialog">&times;</button>
+    <div class="m3-dialog">
+      <div class="m3-dialog-header">
+        <h2 id="auth-modal-title" class="m3-headline-small">Sign In to Kape Point</h2>
+        <button class="m3-icon-button" id="close-auth-modal-btn" aria-label="Close dialog">&times;</button>
       </div>
 
-      <div class="auth-modal-body">
-        <p class="auth-modal-intro">
-          Access your member perks, earn points on every handcrafted cup, and save your preferred coffee customization.
+      <div class="m3-dialog-content">
+        <p class="m3-body-medium text-muted">
+          Earn rewards points on every cup, save preferred coffee customizations, and enjoy member birthday specials.
         </p>
 
-        <!-- Quick Demo Sign-in for immediate testing -->
-        <div class="quick-demo-auth">
-          <button type="button" class="btn btn-secondary btn-block demo-signin-btn" id="quick-demo-btn">
-            Quick Sign In as <strong>Juan Dela Cruz</strong> (120 Points)
-          </button>
+        <!-- Quick 1-Click Demo Button -->
+        <button type="button" class="m3-button m3-button-tonal m3-button-block" id="quick-demo-btn">
+          Sign In as <strong>Juan Dela Cruz</strong> (120 Points)
+        </button>
+
+        <div class="m3-dialog-divider">
+          <span>Or enter email</span>
         </div>
 
-        <div class="auth-divider">
-          <span>Or sign in with email</span>
-        </div>
-
-        <form id="auth-form" class="auth-form" novalidate>
+        <form id="auth-form" novalidate>
           <div class="form-feedback" id="auth-feedback" role="alert" aria-live="polite"></div>
 
-          <div class="form-group">
-            <label for="auth-name">Your Name</label>
-            <input type="text" id="auth-name" class="form-input" placeholder="e.g. Maria Santos" required>
+          <div class="m3-text-field">
+            <input type="text" id="auth-name" class="m3-text-input" placeholder=" " required>
+            <label for="auth-name" class="m3-floating-label">Full Name</label>
           </div>
 
-          <div class="form-group">
-            <label for="auth-email">Email Address</label>
-            <input type="email" id="auth-email" class="form-input" placeholder="e.g. maria@example.com" required>
+          <div class="m3-text-field">
+            <input type="email" id="auth-email" class="m3-text-input" placeholder=" " required>
+            <label for="auth-email" class="m3-floating-label">Email Address</label>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block">Sign In &amp; Continue</button>
+          <div class="m3-dialog-actions">
+            <button type="button" class="m3-button m3-button-text" id="auth-cancel-btn">Cancel</button>
+            <button type="submit" class="m3-button m3-button-filled">Sign In</button>
+          </div>
         </form>
       </div>
     </div>
   </div>
 
-  <!-- Item Customization Modal -->
+  <!-- M3 Dialog: Item Customization Sheet -->
   <div class="modal-backdrop" id="customize-modal" role="dialog" aria-modal="true" aria-labelledby="customize-title" aria-hidden="true">
-    <div class="modal-container customize-modal-container">
-      <div class="modal-header">
+    <div class="m3-dialog m3-dialog-large">
+      <div class="m3-dialog-header">
         <div>
-          <h2 id="customize-title" class="modal-title">Customize Item</h2>
-          <span class="customize-base-price" id="customize-base-price">₱0.00</span>
+          <h2 id="customize-title" class="m3-headline-small">Customize Item</h2>
+          <span class="m3-title-medium text-primary" id="customize-base-price">₱0.00</span>
         </div>
-        <button class="modal-close-btn" id="close-customize-modal-btn" aria-label="Close customize dialog">&times;</button>
+        <button class="m3-icon-button" id="close-customize-modal-btn" aria-label="Close customization">&times;</button>
       </div>
 
-      <div class="customize-modal-body">
-        <!-- Item description summary -->
-        <p class="customize-item-desc" id="customize-item-desc"></p>
+      <div class="m3-dialog-content">
+        <p class="m3-body-medium text-muted" id="customize-item-desc"></p>
 
-        <!-- Milk Choice (only for coffee/drinks) -->
-        <div class="custom-option-group" id="opt-milk-group">
-          <label class="custom-group-label">Milk Selection</label>
-          <div class="radio-pill-group">
-            <label class="radio-pill active"><input type="radio" name="opt-milk" value="dairy" checked> Fresh Dairy (Included)</label>
-            <label class="radio-pill"><input type="radio" name="opt-milk" value="oat"> Oat Milk (+₱30)</label>
-            <label class="radio-pill"><input type="radio" name="opt-milk" value="almond"> Almond Milk (+₱30)</label>
+        <!-- Milk Choice -->
+        <div class="m3-option-group" id="opt-milk-group">
+          <span class="m3-label-large">Milk Selection</span>
+          <div class="m3-chips-group">
+            <label class="m3-choice-chip active"><input type="radio" name="opt-milk" value="dairy" checked><span>Fresh Dairy</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-milk" value="oat"><span>Oat Milk (+₱30)</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-milk" value="almond"><span>Almond Milk (+₱30)</span></label>
           </div>
         </div>
 
-        <!-- Sweetness Level -->
-        <div class="custom-option-group" id="opt-sweet-group">
-          <label class="custom-group-label">Sweetness Level</label>
-          <div class="radio-pill-group">
-            <label class="radio-pill active"><input type="radio" name="opt-sweet" value="100%" checked> 100% (Standard)</label>
-            <label class="radio-pill"><input type="radio" name="opt-sweet" value="70%"> 70% (Less Sweet)</label>
-            <label class="radio-pill"><input type="radio" name="opt-sweet" value="50%"> 50% (Half Sweet)</label>
-            <label class="radio-pill"><input type="radio" name="opt-sweet" value="0%"> 0% (Unsweetened)</label>
+        <!-- Sweetness -->
+        <div class="m3-option-group" id="opt-sweet-group">
+          <span class="m3-label-large">Sweetness Level</span>
+          <div class="m3-chips-group">
+            <label class="m3-choice-chip active"><input type="radio" name="opt-sweet" value="100%" checked><span>100% Standard</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-sweet" value="70%"><span>70% Less Sweet</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-sweet" value="50%"><span>50% Half Sweet</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-sweet" value="0%"><span>0% Unsweetened</span></label>
           </div>
         </div>
 
         <!-- Temperature -->
-        <div class="custom-option-group" id="opt-temp-group">
-          <label class="custom-group-label">Serving Style</label>
-          <div class="radio-pill-group">
-            <label class="radio-pill active"><input type="radio" name="opt-temp" value="iced" checked> Chilled over Ice</label>
-            <label class="radio-pill"><input type="radio" name="opt-temp" value="hot"> Steamed Hot</label>
+        <div class="m3-option-group" id="opt-temp-group">
+          <span class="m3-label-large">Temperature</span>
+          <div class="m3-chips-group">
+            <label class="m3-choice-chip active"><input type="radio" name="opt-temp" value="iced" checked><span>Chilled on Ice</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-temp" value="hot"><span>Steamed Hot</span></label>
           </div>
         </div>
 
         <!-- Extra Shot -->
-        <div class="custom-option-group" id="opt-shot-group">
-          <label class="custom-group-label">Espresso Intensity</label>
-          <div class="radio-pill-group">
-            <label class="radio-pill active"><input type="radio" name="opt-shot" value="standard" checked> Standard Extraction</label>
-            <label class="radio-pill"><input type="radio" name="opt-shot" value="extra"> + Extra Highland Shot (+₱40)</label>
+        <div class="m3-option-group" id="opt-shot-group">
+          <span class="m3-label-large">Espresso Intensity</span>
+          <div class="m3-chips-group">
+            <label class="m3-choice-chip active"><input type="radio" name="opt-shot" value="standard" checked><span>Standard</span></label>
+            <label class="m3-choice-chip"><input type="radio" name="opt-shot" value="extra"><span>+ Extra Highland Shot (+₱40)</span></label>
           </div>
         </div>
 
-        <!-- Special Instruction -->
-        <div class="form-group">
-          <label for="customize-notes">Special Barista Instruction</label>
-          <input type="text" id="customize-notes" class="form-input" placeholder="e.g. Less ice, extra hot, separate syrup">
+        <!-- Barista Notes -->
+        <div class="m3-text-field">
+          <input type="text" id="customize-notes" class="m3-text-input" placeholder=" ">
+          <label for="customize-notes" class="m3-floating-label">Barista Instructions (e.g. less ice)</label>
         </div>
 
-        <!-- Quantity Controls -->
-        <div class="customize-qty-bar">
-          <span class="qty-label">Quantity</span>
-          <div class="qty-stepper">
-            <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">-</button>
-            <span class="qty-value" id="qty-val">1</span>
-            <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+        <!-- Quantity Stepper -->
+        <div class="m3-qty-row">
+          <span class="m3-title-medium">Quantity</span>
+          <div class="m3-stepper">
+            <button type="button" class="m3-stepper-btn" id="qty-minus" aria-label="Decrease quantity">-</button>
+            <span class="m3-stepper-val" id="qty-val">1</span>
+            <button type="button" class="m3-stepper-btn" id="qty-plus" aria-label="Increase quantity">+</button>
           </div>
         </div>
+      </div>
 
-        <!-- Add Button -->
-        <div class="modal-actions">
-          <button type="button" class="btn btn-primary btn-block" id="confirm-add-item-btn">
-            Add to Tray • <span id="customize-total-btn-price">₱0.00</span>
-          </button>
-        </div>
+      <div class="m3-dialog-actions">
+        <button type="button" class="m3-button m3-button-text" id="cancel-customize-modal-btn">Cancel</button>
+        <button type="button" class="m3-button m3-button-filled" id="confirm-add-item-btn">
+          Add to Tray • <span id="customize-total-btn-price">₱0.00</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Order Receipt / Confirmation Modal -->
+  <!-- M3 Dialog: Order Receipt / Confirmation -->
   <div class="modal-backdrop" id="receipt-modal" role="dialog" aria-modal="true" aria-labelledby="receipt-modal-title" aria-hidden="true">
-    <div class="modal-container receipt-modal-container">
-      <div class="receipt-header text-center">
-        <div class="receipt-check-icon" aria-hidden="true">
+    <div class="m3-dialog">
+      <div class="m3-dialog-header text-center">
+        <div class="m3-receipt-badge" aria-hidden="true">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </div>
-        <h2 id="receipt-modal-title" class="receipt-title">Order Confirmed &amp; In Queue!</h2>
-        <p class="receipt-ref" id="receipt-ref-code">Ref: #KP-2026-0000</p>
+        <h2 id="receipt-modal-title" class="m3-headline-small">Order Confirmed!</h2>
+        <span class="m3-label-large text-primary" id="receipt-ref-code">Ref: #KP-2026-0000</span>
       </div>
 
-      <div class="receipt-status-banner">
-        <div class="status-clock-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <div class="m3-dialog-content">
+        <div class="m3-callout-card">
+          <div class="m3-callout-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <strong class="m3-title-small">Estimated Prep: 10 to 14 Minutes</strong>
+            <p class="m3-body-small text-muted" id="receipt-dispatch-instruction">Our baristas are preparing your roasts.</p>
+          </div>
         </div>
-        <div>
-          <strong>Estimated Preparation: 10 to 14 Minutes</strong>
-          <p id="receipt-dispatch-instruction">Our baristas are preparing your roasts. Your tray will be brought directly to your table.</p>
-        </div>
-      </div>
 
-      <div class="receipt-body">
-        <h3 class="receipt-section-heading">Order Breakdown</h3>
-        <ul class="receipt-items-list" id="receipt-items-list">
+        <span class="m3-label-medium">Order Items</span>
+        <ul class="m3-receipt-list" id="receipt-items-list">
           <!-- Injected dynamically -->
         </ul>
 
-        <div class="receipt-totals-box">
-          <div class="summary-line">
-            <span>Total Paid</span>
-            <strong class="receipt-total-value" id="receipt-final-total">₱0.00</strong>
+        <div class="m3-divider"></div>
+
+        <div class="m3-price-breakdown">
+          <div class="m3-price-row">
+            <span class="m3-title-medium">Total Paid</span>
+            <strong class="m3-title-large text-primary" id="receipt-final-total">₱0.00</strong>
           </div>
-          <div class="summary-line points-earned-line">
-            <span>Points Earned</span>
-            <span class="points-badge" id="receipt-points-earned">+0 Points</span>
+          <div class="m3-price-row">
+            <span class="m3-body-medium">Rewards Earned</span>
+            <span class="m3-points-pill" id="receipt-points-earned">+0 Points</span>
           </div>
         </div>
       </div>
 
-      <div class="receipt-actions">
-        <button type="button" class="btn btn-secondary" id="receipt-close-btn">Return to Menu</button>
-        <a href="./index.html" class="btn btn-primary">Back to Homepage</a>
+      <div class="m3-dialog-actions">
+        <button type="button" class="m3-button m3-button-text" id="receipt-close-btn">New Order</button>
+        <a href="./index.html" class="m3-button m3-button-filled">Back to Homepage</a>
       </div>
     </div>
   </div>
 
-  <!-- Page Scripts -->
   <script src="./order.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
-  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
-  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Soft Coaster / Accent Ring -->
+  <circle cx="100" cy="100" r="76" fill="#C87D32" fill-opacity="0.12"/>
+  <circle cx="100" cy="100" r="66" fill="#C87D32" fill-opacity="0.08"/>
   <!-- Croissant body -->
   <path d="M45 125 C45 85, 155 85, 155 125 C145 138, 125 120, 100 120 C75 120, 55 138, 45 125 Z" fill="#D99B5B"/>
   <path d="M60 115 C70 95, 130 95, 140 115 C130 110, 115 105, 100 105 C85 105, 70 110, 60 115 Z" fill="#C07C35"/>

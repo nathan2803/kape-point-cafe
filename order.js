@@ -192,7 +192,7 @@
       if (!headerContainer) return;
 
       if (this.user) {
-        // Authenticated Header Badge
+        // Authenticated Header M3 User Chip
         const initials = this.user.name
           .split(' ')
           .map((n) => n[0])
@@ -201,38 +201,39 @@
           .toUpperCase();
 
         headerContainer.innerHTML = `
-          <div class="user-profile-badge">
-            <div class="user-avatar-circle">${initials}</div>
-            <div class="user-meta-text">
-              <span class="user-display-name">${this.user.name}</span>
-              <span class="user-points-pill">★ ${this.user.points} Points</span>
+          <div class="m3-user-chip user-profile-badge">
+            <div class="m3-avatar user-avatar-circle">${initials}</div>
+            <div class="m3-user-info user-meta-text">
+              <span class="m3-user-name user-display-name">${this.user.name}</span>
+              <span class="m3-user-pts user-points-pill">★ ${this.user.points} pts</span>
             </div>
-            <button type="button" class="btn-text user-signout-btn" id="signout-btn" title="Sign Out">Sign Out</button>
+            <button type="button" class="m3-icon-button m3-signout-btn user-signout-btn" id="signout-btn" title="Sign Out" aria-label="Sign Out">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            </button>
           </div>
         `;
 
         const signoutBtn = document.getElementById('signout-btn');
         if (signoutBtn) signoutBtn.addEventListener('click', () => this.signOut());
 
-        // Authenticated Banner
+        // Authenticated M3 Card Banner
         if (rewardsBanner) {
           const neededForNextReward = Math.max(0, 150 - (this.user.points % 150));
           const progressPercent = Math.min(100, Math.round(((this.user.points % 150) / 150) * 100));
 
           rewardsBanner.innerHTML = `
-            <div class="rewards-banner-inner signed-in">
-              <div class="rewards-info">
-                <span class="rewards-greeting">Mabuhay, ${this.user.name}!</span>
-                <p class="rewards-status-text">
+            <div class="m3-card m3-card-elevated rewards-card signed-in">
+              <div class="rewards-text">
+                <div class="m3-badge-row">
+                  <span class="m3-title-medium rewards-greeting">Mabuhay, ${this.user.name}!</span>
+                  <span class="m3-badge-tonal tier-name">${this.user.points >= 200 ? 'Gold Roaster' : 'Highland Regular'}</span>
+                </div>
+                <p class="m3-body-medium text-muted rewards-status-text">
                   You have <strong>${this.user.points} Kape Points</strong>. Only ${neededForNextReward} more points until a complimentary Highland Pour-Over!
                 </p>
-                <div class="rewards-bar-track" role="progressbar" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100">
-                  <div class="rewards-bar-fill" style="width: ${progressPercent}%;"></div>
+                <div class="m3-linear-progress rewards-bar-track" role="progressbar" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100">
+                  <div class="m3-linear-progress-indicator rewards-bar-fill" style="width: ${progressPercent}%;"></div>
                 </div>
-              </div>
-              <div class="rewards-badge-tier">
-                <span class="tier-label">Member Tier</span>
-                <strong class="tier-name">${this.user.points >= 200 ? 'Gold Roaster' : 'Highland Regular'}</strong>
               </div>
             </div>
           `;
@@ -242,9 +243,9 @@
           pointsRewardNote.innerHTML = `Earning <strong>10 Points</strong> per ₱100 to account <strong>${this.user.email}</strong>.`;
         }
       } else {
-        // Guest / Unauthenticated Header Button
+        // Guest / Unauthenticated M3 Tonal Button
         headerContainer.innerHTML = `
-          <button type="button" class="btn btn-sm btn-secondary sign-in-trigger-btn" id="open-auth-modal-btn">
+          <button type="button" class="m3-button m3-button-tonal sign-in-trigger-btn" id="open-auth-modal-btn">
             Sign In
           </button>
         `;
@@ -252,17 +253,17 @@
         const openBtn = document.getElementById('open-auth-modal-btn');
         if (openBtn) openBtn.addEventListener('click', () => this.openAuthModal());
 
-        // Guest Banner
+        // Guest M3 Card Banner
         if (rewardsBanner) {
           rewardsBanner.innerHTML = `
-            <div class="rewards-banner-inner guest">
-              <div class="rewards-info">
-                <span class="rewards-greeting">Kape Point Rewards</span>
-                <p class="rewards-status-text">
+            <div class="m3-card m3-card-elevated rewards-card guest">
+              <div class="rewards-text">
+                <h3 class="m3-title-medium rewards-greeting">Kape Point Rewards</h3>
+                <p class="m3-body-medium text-muted rewards-status-text">
                   Sign in or create an account to earn points on every cup, save favorite brew recipes, and receive free anniversary drinks.
                 </p>
               </div>
-              <button type="button" class="btn btn-primary" id="banner-signin-btn">
+              <button type="button" class="m3-button m3-button-filled" id="banner-signin-btn">
                 Sign In / Join
               </button>
             </div>
@@ -373,7 +374,7 @@
     },
 
     bindFilters() {
-      const filterBtns = document.querySelectorAll('.order-filter-bar .filter-btn');
+      const filterBtns = document.querySelectorAll('.m3-chip, .order-filter-bar .filter-btn');
       filterBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
           filterBtns.forEach((b) => {
@@ -391,9 +392,22 @@
 
     bindSearch() {
       const searchInput = document.getElementById('catalog-search');
+      const clearBtn = document.getElementById('search-clear-btn');
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           this.searchQuery = e.target.value.toLowerCase().trim();
+          if (clearBtn) clearBtn.style.display = this.searchQuery ? 'inline-flex' : 'none';
+          this.render();
+        });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+          }
+          this.searchQuery = '';
+          clearBtn.style.display = 'none';
           this.render();
         });
       }
@@ -412,14 +426,16 @@
         this.itemsContainer.innerHTML = `
           <div class="empty-search-state">
             <p>No matching coffee or pastry found for "${this.searchQuery}".</p>
-            <button type="button" class="btn-text" id="reset-search-btn">Reset search filters</button>
+            <button type="button" class="m3-button m3-button-text" id="reset-search-btn">Reset search filters</button>
           </div>
         `;
         const resetBtn = document.getElementById('reset-search-btn');
         if (resetBtn) {
           resetBtn.addEventListener('click', () => {
             const searchInput = document.getElementById('catalog-search');
+            const clearBtn = document.getElementById('search-clear-btn');
             if (searchInput) searchInput.value = '';
+            if (clearBtn) clearBtn.style.display = 'none';
             this.searchQuery = '';
             this.render();
           });
@@ -429,20 +445,20 @@
 
       this.itemsContainer.innerHTML = filtered
         .map((item) => `
-          <article class="order-card" data-id="${item.id}">
-            <div class="order-card-media">
+          <article class="m3-card m3-card-elevated order-card" data-id="${item.id}">
+            <div class="m3-card-media order-card-media">
               <img src="${item.image}" alt="${item.name}" width="140" height="140" loading="lazy">
-              ${item.tag ? `<span class="item-tag">${item.tag}</span>` : ''}
+              ${item.tag ? `<span class="m3-card-tag item-tag">${item.tag}</span>` : ''}
             </div>
-            <div class="order-card-info">
-              <div class="order-card-title-row">
-                <h3 class="order-item-title">${item.name}</h3>
-                <span class="order-item-price">₱${item.price.toFixed(2)}</span>
+            <div class="m3-card-content order-card-info">
+              <div class="m3-card-header order-card-title-row">
+                <h3 class="m3-title-medium order-item-title">${item.name}</h3>
+                <span class="m3-title-medium text-primary order-item-price">₱${item.price.toFixed(2)}</span>
               </div>
-              <p class="order-item-description">${item.desc}</p>
-              <div class="order-card-bottom">
-                <span class="order-item-specs">${item.details}</span>
-                <button type="button" class="btn btn-sm btn-primary add-item-trigger-btn" data-id="${item.id}">
+              <p class="m3-body-small text-muted order-item-description">${item.desc}</p>
+              <div class="m3-card-footer order-card-bottom">
+                <span class="m3-label-small text-muted order-item-specs">${item.details}</span>
+                <button type="button" class="m3-button m3-button-filled add-item-trigger-btn" data-id="${item.id}">
                   Customize &amp; Add
                 </button>
               </div>
@@ -475,11 +491,13 @@
     init() {
       this.modal = document.getElementById('customize-modal');
       const closeBtn = document.getElementById('close-customize-modal-btn');
+      const cancelBtn = document.getElementById('cancel-customize-modal-btn');
       const minusBtn = document.getElementById('qty-minus');
       const plusBtn = document.getElementById('qty-plus');
       const confirmBtn = document.getElementById('confirm-add-item-btn');
 
       if (closeBtn) closeBtn.addEventListener('click', () => this.close());
+      if (cancelBtn) cancelBtn.addEventListener('click', () => this.close());
       if (this.modal) {
         this.modal.addEventListener('click', (e) => {
           if (e.target === this.modal) this.close();
@@ -504,15 +522,15 @@
         });
       }
 
-      // Radio pills listener to recalculate price dynamically
+      // Choice chips & radio pills listener to recalculate price dynamically
       const radioInputs = document.querySelectorAll('#customize-modal input[type="radio"]');
       radioInputs.forEach((radio) => {
         radio.addEventListener('change', () => {
-          // Highlight active label
-          const parentGroup = radio.closest('.radio-pill-group');
-          if (parentGroup) {
-            parentGroup.querySelectorAll('.radio-pill').forEach((pill) => pill.classList.remove('active'));
-            radio.closest('.radio-pill')?.classList.add('active');
+          const group = radio.closest('.m3-chips-group') || radio.closest('.radio-pill-group');
+          if (group) {
+            group.querySelectorAll('.m3-choice-chip, .radio-pill').forEach((pill) => pill.classList.remove('active'));
+            const target = radio.closest('.m3-choice-chip') || radio.closest('.radio-pill');
+            if (target) target.classList.add('active');
           }
           this.updatePriceDisplay();
         });
@@ -539,12 +557,11 @@
 
       // Reset options
       document.querySelectorAll('#customize-modal input[type="radio"]').forEach((r) => {
-        if (r.value === 'dairy' || r.value === '100%' || r.value === 'iced' || r.value === 'standard') {
-          r.checked = true;
-          r.closest('.radio-pill')?.classList.add('active');
-        } else {
-          r.checked = false;
-          r.closest('.radio-pill')?.classList.remove('active');
+        const isDefault = (r.value === 'dairy' || r.value === '100%' || r.value === 'iced' || r.value === 'standard');
+        r.checked = isDefault;
+        const parentLabel = r.closest('.m3-choice-chip') || r.closest('.radio-pill');
+        if (parentLabel) {
+          parentLabel.classList.toggle('active', isDefault);
         }
       });
 
@@ -689,14 +706,31 @@
     },
 
     bindFulfillmentOptions() {
+      const segments = document.querySelectorAll('.m3-segmented-buttons .m3-segment');
       const radios = document.querySelectorAll('input[name="fulfillment"]');
       const tableGroup = document.getElementById('table-input-group');
       const addressGroup = document.getElementById('address-input-group');
 
+      // M3 Segmented Buttons
+      segments.forEach((seg) => {
+        seg.addEventListener('click', () => {
+          segments.forEach((s) => {
+            s.classList.remove('active');
+            s.setAttribute('aria-checked', 'false');
+          });
+          seg.classList.add('active');
+          seg.setAttribute('aria-checked', 'true');
+          this.fulfillment = seg.getAttribute('data-value') || 'dine-in';
+
+          if (tableGroup) tableGroup.style.display = this.fulfillment === 'dine-in' ? 'block' : 'none';
+          if (addressGroup) addressGroup.style.display = this.fulfillment === 'delivery' ? 'block' : 'none';
+        });
+      });
+
+      // Fallback radio buttons if present
       radios.forEach((radio) => {
         radio.addEventListener('change', () => {
           this.fulfillment = radio.value;
-
           radios.forEach((r) => r.closest('.fulfillment-pill')?.classList.remove('active'));
           radio.closest('.fulfillment-pill')?.classList.add('active');
 
@@ -763,27 +797,27 @@
         listEl.innerHTML = `
           <div class="empty-tray-state">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="empty-icon" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            <p class="empty-title">Your tray is empty</p>
-            <p class="empty-subtitle">Choose handcrafted beverages or pastries from the menu to start your order.</p>
+            <p class="empty-title m3-title-small">Your tray is empty</p>
+            <p class="empty-subtitle m3-body-small text-muted">Choose handcrafted beverages or pastries from the menu to start your order.</p>
           </div>
         `;
         if (checkoutBtn) checkoutBtn.disabled = true;
       } else {
         listEl.innerHTML = this.items
           .map((item) => `
-            <div class="tray-item-row" data-id="${item.id}">
-              <div class="tray-item-details">
-                <span class="tray-item-name">${item.name}</span>
-                <span class="tray-item-customization">${item.customization}</span>
-                <span class="tray-item-unit-cost">₱${(item.unitPrice * item.quantity).toFixed(2)}</span>
+            <div class="m3-tray-item-row tray-item-row" data-id="${item.id}">
+              <div class="m3-tray-item-details tray-item-details">
+                <span class="m3-title-small tray-item-name">${item.name}</span>
+                <span class="m3-body-small text-muted tray-item-customization">${item.customization}</span>
+                <span class="m3-label-large text-primary tray-item-unit-cost">₱${(item.unitPrice * item.quantity).toFixed(2)}</span>
               </div>
-              <div class="tray-item-actions">
-                <div class="qty-stepper-sm">
-                  <button type="button" class="btn-step-minus" data-id="${item.id}" aria-label="Decrease quantity">-</button>
-                  <span class="step-qty-val">${item.quantity}</span>
-                  <button type="button" class="btn-step-plus" data-id="${item.id}" aria-label="Increase quantity">+</button>
+              <div class="m3-tray-item-actions tray-item-actions">
+                <div class="m3-stepper-sm qty-stepper-sm">
+                  <button type="button" class="m3-stepper-btn-sm btn-step-minus" data-id="${item.id}" aria-label="Decrease quantity">-</button>
+                  <span class="m3-stepper-val-sm step-qty-val">${item.quantity}</span>
+                  <button type="button" class="m3-stepper-btn-sm btn-step-plus" data-id="${item.id}" aria-label="Increase quantity">+</button>
                 </div>
-                <button type="button" class="tray-remove-btn" data-id="${item.id}" aria-label="Remove item">&times;</button>
+                <button type="button" class="m3-icon-button m3-remove-btn tray-remove-btn" data-id="${item.id}" aria-label="Remove item" title="Remove item">&times;</button>
               </div>
             </div>
           `)

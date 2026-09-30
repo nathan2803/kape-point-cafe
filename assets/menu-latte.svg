@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
-  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
-  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <circle cx="100" cy="100" r="76" fill="#C87D32" fill-opacity="0.12"/>
+  <circle cx="100" cy="100" r="66" fill="#C87D32" fill-opacity="0.08"/>
   <!-- Tall glass cup for Spanish Latte -->
-  <path d="M75 55 L82 145 C83 155, 117 155, 118 145 L125 55 Z" fill="#FFFFFF" fill-opacity="0.9" stroke="#E2D4C3" stroke-width="2"/>
+  <path d="M75 55 L82 145 C83 155, 117 155, 118 145 L125 55 Z" fill="#FFFFFF" fill-opacity="0.95" stroke="#E2D4C3" stroke-width="2"/>
   <!-- Layers: condensed milk, espresso, milk froth -->
   <path d="M82 145 C83 155, 117 155, 118 145 L117 130 L83 130 Z" fill="#FBF3DB"/>
   <path d="M83 130 L117 130 L119 95 L81 95 Z" fill="#5A311A"/>

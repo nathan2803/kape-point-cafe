@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
-  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
-  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Soft Coaster / Accent Ring -->
+  <circle cx="100" cy="100" r="76" fill="#C87D32" fill-opacity="0.12"/>
+  <circle cx="100" cy="100" r="66" fill="#C87D32" fill-opacity="0.08"/>
   <!-- Sourdough bread top slice -->
   <path d="M50 85 C65 70, 135 70, 150 85 L145 95 L55 95 Z" fill="#D99B5B" stroke="#B8732E" stroke-width="2"/>
   <!-- Lettuce -->

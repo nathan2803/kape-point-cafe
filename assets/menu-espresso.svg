@@ -1,14 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
-  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
-  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Soft Coaster / Accent Ring -->
+  <circle cx="100" cy="100" r="76" fill="#C87D32" fill-opacity="0.12"/>
+  <circle cx="100" cy="100" r="66" fill="#C87D32" fill-opacity="0.08"/>
   <!-- Demitasse cup -->
-  <ellipse cx="100" cy="150" rx="55" ry="12" fill="#D8C5B2"/>
-  <ellipse cx="100" cy="148" rx="45" ry="9" fill="#FFFFFF"/>
+  <ellipse cx="100" cy="150" rx="55" ry="12" fill="#000000" fill-opacity="0.15"/>
+  <ellipse cx="100" cy="148" rx="48" ry="9" fill="#EADBCC"/>
   <path d="M130 95 C145 95, 148 120, 130 120" stroke="#FFFFFF" stroke-width="8" fill="none"/>
   <path d="M70 85 C75 135, 90 145, 100 145 C110 145, 125 135, 130 85 Z" fill="#FFFFFF"/>
   <ellipse cx="100" cy="85" rx="30" ry="8" fill="#3E2013"/>
   <ellipse cx="100" cy="85" rx="26" ry="6" fill="#A5632A"/>
   <!-- Steam -->
-  <path d="M95 65 C92 50, 102 45, 98 35" stroke="#C87D32" stroke-width="2" stroke-linecap="round"/>
-  <path d="M105 68 C108 55, 98 48, 104 38" stroke="#C87D32" stroke-width="2" stroke-linecap="round"/>
+  <path d="M95 65 C92 50, 102 45, 98 35" stroke="#C87D32" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M105 68 C108 55, 98 48, 104 38" stroke="#C87D32" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
