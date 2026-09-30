@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Croissant body -->
+  <path d="M45 125 C45 85, 155 85, 155 125 C145 138, 125 120, 100 120 C75 120, 55 138, 45 125 Z" fill="#D99B5B"/>
+  <path d="M60 115 C70 95, 130 95, 140 115 C130 110, 115 105, 100 105 C85 105, 70 110, 60 115 Z" fill="#C07C35"/>
+  <path d="M75 102 C85 90, 115 90, 125 102 C118 97, 108 94, 100 94 C92 94, 82 97, 75 102 Z" fill="#A46022"/>
+  <!-- Flaky details & golden shine -->
+  <ellipse cx="100" cy="98" rx="8" ry="3" fill="#FFE2B3" opacity="0.6"/>
+  <!-- Pastry crumbs -->
+  <circle cx="55" cy="140" r="2.5" fill="#D99B5B"/>
+  <circle cx="140" cy="142" r="3" fill="#C07C35"/>
+  <circle cx="150" cy="135" r="2" fill="#D99B5B"/>
+</svg>

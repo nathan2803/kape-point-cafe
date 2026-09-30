@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Cold brew bottle or rocks glass with ice cubes -->
+  <path d="M72 70 L78 150 C79 158, 121 158, 122 150 L128 70 Z" fill="#2C1810"/>
+  <ellipse cx="100" cy="70" rx="28" ry="7" fill="#4B2816"/>
+  <!-- Ice cubes -->
+  <rect x="85" y="85" width="22" height="22" rx="4" fill="#FFFFFF" fill-opacity="0.3" transform="rotate(12 85 85)"/>
+  <rect x="98" y="105" width="20" height="20" rx="4" fill="#FFFFFF" fill-opacity="0.3" transform="rotate(-15 98 105)"/>
+  <!-- Citrus garnish wheel -->
+  <circle cx="78" cy="72" r="14" fill="#ECA239"/>
+  <circle cx="78" cy="72" r="10" fill="#FFF3D4"/>
+  <path d="M78 62 L78 82 M68 72 L88 72" stroke="#ECA239" stroke-width="1.5"/>
+</svg>

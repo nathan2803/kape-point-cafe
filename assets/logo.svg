@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Coffee Bean & Steam Mark -->
+  <g transform="translate(10, 8)">
+    <circle cx="22" cy="22" r="21" fill="#C87D32" fill-opacity="0.15" stroke="#C87D32" stroke-width="2"/>
+    <path d="M14 26 C14 16, 30 16, 30 26 C30 33, 14 33, 14 26 Z" fill="#2C1810"/>
+    <path d="M18 20 C22 24, 22 28, 26 32" stroke="#FAF7F2" stroke-width="2" stroke-linecap="round"/>
+    <!-- Steam wisps -->
+    <path d="M18 12 C18 9, 21 8, 20 5" stroke="#C87D32" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M24 13 C24 10, 27 9, 26 6" stroke="#C87D32" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <!-- Text Brand -->
+  <text x="64" y="31" font-family="'Georgia', serif" font-size="20" font-weight="700" fill="#2C1810" class="brand-title">Kape Point</text>
+  <text x="64" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2.5" fill="#C87D32">ARTISAN CAFE &amp; ROASTERY</text>
+</svg>

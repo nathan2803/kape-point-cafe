@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Sourdough bread top slice -->
+  <path d="M50 85 C65 70, 135 70, 150 85 L145 95 L55 95 Z" fill="#D99B5B" stroke="#B8732E" stroke-width="2"/>
+  <!-- Lettuce -->
+  <path d="M48 97 Q60 92 72 98 Q84 92 96 98 Q108 92 120 98 Q132 92 144 98 Q152 94 154 98 L152 104 L48 104 Z" fill="#699C52"/>
+  <!-- Tomato & Cheese -->
+  <rect x="52" y="104" width="96" height="7" rx="2" fill="#D94A38"/>
+  <polygon points="54,111 65,119 75,111 146,111 146,116 54,116" fill="#F6C343"/>
+  <!-- Meat / filling layer -->
+  <rect x="52" y="116" width="96" height="8" rx="2" fill="#843B22"/>
+  <!-- Bottom slice -->
+  <path d="M52 124 L148 124 L144 135 C135 142, 65 142, 56 135 Z" fill="#C58546" stroke="#A76829" stroke-width="2"/>
+</svg>

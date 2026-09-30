@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none">
+  <circle cx="80" cy="80" r="72" fill="#F5EBE1"/>
+  <circle cx="80" cy="80" r="54" fill="#EADBCC"/>
+  <!-- Gooseneck kettle and dripper -->
+  <!-- Kettle body -->
+  <path d="M42 98 C42 78, 68 76, 75 76 L75 106 C62 106, 42 106, 42 98 Z" fill="#2C1810"/>
+  <rect x="52" y="70" width="16" height="6" rx="2" fill="#C87D32"/>
+  <!-- Gooseneck spout -->
+  <path d="M72 82 C82 82, 88 68, 92 65" stroke="#2C1810" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Dripper & Server -->
+  <polygon points="90,75 118,75 108,92 100,92" fill="#C87D32"/>
+  <path d="M96 95 L112 95 L116 118 C116 122, 92 122, 92 118 Z" fill="#FFFFFF" fill-opacity="0.8" stroke="#D8C5B2" stroke-width="2"/>
+  <!-- Coffee level in server -->
+  <path d="M94 108 L114 108 L115 118 C115 120, 93 120, 93 118 Z" fill="#3E2013"/>
+  <!-- Drip stream -->
+  <line x1="104" y1="92" x2="104" y2="106" stroke="#3E2013" stroke-width="1.8" stroke-dasharray="2 2"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <rect width="200" height="200" rx="20" fill="#F5EBE1"/>
+  <circle cx="100" cy="100" r="70" fill="#EADBCC"/>
+  <!-- Iced Matcha cup -->
+  <path d="M75 55 L82 145 C83 155, 117 155, 118 145 L125 55 Z" fill="#FFFFFF" fill-opacity="0.9" stroke="#E2D4C3" stroke-width="2"/>
+  <!-- Milk layer at bottom -->
+  <path d="M82 145 C83 155, 117 155, 118 145 L119 105 L81 105 Z" fill="#FDFBF7"/>
+  <!-- Matcha green layer on top -->
+  <path d="M81 105 L119 105 L124 58 L76 58 Z" fill="#4E7C45"/>
+  <ellipse cx="100" cy="58" rx="24" ry="7" fill="#5F9754"/>
+  <ellipse cx="100" cy="58" rx="20" ry="5" fill="#6FA863"/>
+  <!-- Straw -->
+  <line x1="90" y1="35" x2="105" y2="135" stroke="#C87D32" stroke-width="4" stroke-linecap="round"/>
+</svg>

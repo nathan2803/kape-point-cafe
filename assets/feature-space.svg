@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none">
+  <circle cx="80" cy="80" r="72" fill="#F5EBE1"/>
+  <circle cx="80" cy="80" r="54" fill="#EADBCC"/>
+  <!-- Cozy chair / table workspace -->
+  <!-- Chair -->
+  <path d="M42 80 C42 68, 52 65, 58 65 L58 100 L42 100 Z" fill="#C87D32"/>
+  <rect x="42" y="96" width="34" height="8" rx="3" fill="#A5632A"/>
+  <line x1="48" y1="104" x2="44" y2="122" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
+  <line x1="70" y1="104" x2="74" y2="122" stroke="#2C1810" stroke-width="3" stroke-linecap="round"/>
+  <!-- Table -->
+  <rect x="76" y="85" width="46" height="6" rx="2" fill="#3E2013"/>
+  <line x1="99" y1="91" x2="99" y2="122" stroke="#3E2013" stroke-width="4" stroke-linecap="round"/>
+  <line x1="88" y1="122" x2="110" y2="122" stroke="#3E2013" stroke-width="4" stroke-linecap="round"/>
+  <!-- Laptop on table -->
+  <polygon points="86,85 106,85 108,82 84,82" fill="#D8C5B2"/>
+  <rect x="88" y="70" width="16" height="12" rx="1" fill="#FFFFFF" stroke="#8D7A68" stroke-width="1.5"/>
+  <!-- Wi-Fi signal waves above -->
+  <path d="M72 45 C78 39, 88 39, 94 45" stroke="#C87D32" stroke-width="2" stroke-linecap="round"/>
+  <path d="M76 50 C80 46, 86 46, 90 50" stroke="#C87D32" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="83" cy="55" r="1.5" fill="#C87D32"/>
+</svg>

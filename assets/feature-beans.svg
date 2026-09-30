@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" fill="none">
+  <circle cx="80" cy="80" r="72" fill="#F5EBE1"/>
+  <circle cx="80" cy="80" r="54" fill="#EADBCC"/>
+  <!-- Bag of coffee beans -->
+  <path d="M55 55 L105 55 L98 115 C98 122, 62 122, 62 115 Z" fill="#C87D32"/>
+  <path d="M50 48 L110 48 L105 55 L55 55 Z" fill="#A5632A"/>
+  <!-- Label on bag -->
+  <rect x="64" y="70" width="32" height="24" rx="4" fill="#FFFDF8"/>
+  <circle cx="80" cy="80" r="5" fill="#3E2013"/>
+  <line x1="72" y1="89" x2="88" y2="89" stroke="#C87D32" stroke-width="1.5"/>
+  <!-- Spilled beans -->
+  <g transform="translate(102, 115) rotate(20)">
+    <ellipse cx="6" cy="4" rx="6" ry="4" fill="#3E2013"/>
+    <path d="M2 4 C4 2, 8 6, 10 4" stroke="#FFFDF8" stroke-width="1"/>
+  </g>
+  <g transform="translate(46, 118) rotate(-30)">
+    <ellipse cx="5" cy="3.5" rx="5" ry="3.5" fill="#3E2013"/>
+    <path d="M2 3.5 C3.5 2, 6.5 5, 8 3.5" stroke="#FFFDF8" stroke-width="0.8"/>
+  </g>
+</svg>
