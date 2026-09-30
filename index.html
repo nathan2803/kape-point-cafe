@@ -3,26 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kape Point Cafe - Artisan Specialty Coffee, handcrafted beverages, and fresh pastries in a cozy, community-first space.">
+  <meta name="description" content="Kape Point Cafe - Artisan Specialty Coffee, handcrafted beverages, and fresh pastries in a cozy, community-first space in Lucena City.">
   <title>Kape Point Cafe | Artisan Coffee &amp; Roastery</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
 </head>
 <body>
   <!-- Header / Navigation Bar -->
   <header class="site-header" id="header">
     <div class="header-container">
       <a href="#hero" class="brand-link" aria-label="Kape Point Cafe Home">
-        <img src="./assets/logo.svg" alt="Kape Point Cafe Logo" class="brand-logo" width="180" height="45">
+        <!-- Responsive Inline SVG Logo (inherits theme text and accent tokens) -->
+        <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 56" width="210" height="48" fill="none" aria-hidden="true">
+          <g transform="translate(6, 6)">
+            <circle cx="22" cy="22" r="21" fill="var(--color-accent)" fill-opacity="0.15" stroke="var(--color-accent)" stroke-width="1.75"/>
+            <path d="M14 26 C14 16, 30 16, 30 26 C30 33, 14 33, 14 26 Z" fill="var(--color-primary-mark)"/>
+            <path d="M18 20 C22 24, 22 28, 26 32" stroke="var(--color-bg)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M18 12 C18 9, 21 8, 20 5" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M24 13 C24 10, 27 9, 26 6" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
+          </g>
+          <text x="64" y="29" font-family="Georgia, serif" font-size="21" font-weight="600" fill="var(--color-text)" class="brand-text-name">Kape Point</text>
+          <text x="64" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" letter-spacing="2" fill="var(--color-accent)">ARTISAN CAFE &amp; ROASTERY</text>
+        </svg>
       </a>
 
-      <!-- Desktop Navigation & Controls -->
+      <!-- Desktop Navigation -->
       <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
         <ul class="nav-list">
           <li><a href="#about" class="nav-link">Our Story</a></li>
-          <li><a href="#features" class="nav-link">Craft</a></li>
+          <li><a href="#features" class="nav-link">The Craft</a></li>
           <li><a href="#menu" class="nav-link">Menu &amp; Pricing</a></li>
-          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#reviews" class="nav-link">Community</a></li>
           <li><a href="#hours" class="nav-link">Hours &amp; Location</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -31,7 +41,7 @@
       <div class="header-actions">
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="btn-icon theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -42,7 +52,7 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -65,35 +75,37 @@
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="hero-eyebrow">Handcrafted in Small Batches</span>
-          <h1 class="hero-title">Every Cup Tells a Highland Story</h1>
+          <div class="heritage-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span>Single-Origin Highland Harvests</span>
+          </div>
+
+          <h1 class="hero-title">Every cup tells a highland story.</h1>
+          
           <p class="hero-description">
-            Welcome to Kape Point Cafe. We source ethical, single-origin Philippine coffee beans directly from mountain farmers, paired with slow-fermented artisan sourdough pastries in a peaceful, work-friendly space.
+            We partner directly with smallholder coffee farmers across Benguet and Sagada. Enjoy small-batch roasted single-origin brews, slow-poured espresso, and daily butter pastries in a serene, work-friendly cafe.
           </p>
+
           <div class="hero-actions">
-            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+            <a href="#menu" class="btn btn-primary">Explore Daily Menu</a>
             <button id="open-reserve-btn-hero" class="btn btn-secondary">Reserve a Table</button>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Philippine Highland Beans</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">48-Hr</span>
-              <span class="stat-label">Slow Cold Brew Extraction</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">Fresh</span>
-              <span class="stat-label">Daily Artisan Bakes</span>
-            </div>
+
+          <div class="origin-strip">
+            <span class="origin-label">Current Roasts:</span>
+            <span class="origin-tag">Atok Arabica (Benguet)</span>
+            <span class="origin-tag">Sagada Typica</span>
+            <span class="origin-tag">Lipa Liberica</span>
           </div>
         </div>
+
         <div class="hero-visual">
-          <div class="hero-image-wrapper">
+          <div class="hero-art-frame">
             <img src="./assets/hero-coffee.svg" alt="Artisanal pour-over coffee cup on saucer with aromatic steam" class="hero-image" width="500" height="400">
+            <div class="art-caption">
+              <span class="caption-title">House Pour-Over</span>
+              <span class="caption-sub">Slow extracted at 93°C</span>
+            </div>
           </div>
         </div>
       </div>
@@ -103,39 +115,30 @@
     <section class="about-section" id="about">
       <div class="container about-grid">
         <div class="about-visual">
-          <div class="about-card-badge">
-            <span class="badge-title">Local Roastery</span>
-            <span class="badge-sub">Established with love</span>
+          <div class="about-media-card">
+            <img src="./assets/feature-barista.svg" alt="Craft barista brewing coffee" class="about-image" width="300" height="300">
           </div>
-          <img src="./assets/feature-barista.svg" alt="Barista preparing artisanal filter coffee" class="about-image" width="320" height="320">
         </div>
         <div class="about-content">
-          <span class="section-tag">Our Roots &amp; Purpose</span>
-          <h2 class="section-title">Brewing with Intention, Honoring Our Growers</h2>
+          <h2 class="section-title">Brewing with Intention, Honoring Local Roots</h2>
           <p class="section-lead">
-            Kape Point Cafe began with a simple purpose: celebrating local coffee culture by bridging mountain farmers directly with urban coffee enthusiasts.
+            Kape Point Cafe was founded in Lucena City to celebrate Philippine highland coffee culture and create a space where neighbors, students, and remote creators can pause and connect.
           </p>
           <p class="section-text">
-            We collaborate with smallholder coffee farming communities across Benguet, Sagada, and Bukidnon. Every bean is carefully harvested at peak ripeness, sun-dried, and roasted in small weekly batches right here in our roastery. 
+            Rather than relying on imported industrial blends, we roast single-origin beans in small weekly batches. We buy directly from grower cooperatives at prices well above commodity rates, ensuring sustainable livelihoods for farming families.
           </p>
-          <div class="values-list">
-            <div class="value-item">
-              <span class="value-check" aria-hidden="true">&#10003;</span>
-              <div>
-                <strong>Direct-Trade Partnerships:</strong> Fair compensation directly supporting coffee farming families.
-              </div>
+          <div class="pillars-list">
+            <div class="pillar-item">
+              <h3 class="pillar-title">Direct Highland Trade</h3>
+              <p class="pillar-text">Directly sourcing from Benguet, Mountain Province, and Bukidnon farmers with full transparent traceability.</p>
             </div>
-            <div class="value-item">
-              <span class="value-check" aria-hidden="true">&#10003;</span>
-              <div>
-                <strong>Zero Waste Coffee Ground Upcycling:</strong> Organic coffee grounds repurposed as community garden compost.
-              </div>
+            <div class="pillar-item">
+              <h3 class="pillar-title">Sustainable Roastery Practice</h3>
+              <p class="pillar-text">Spent grounds are donated to local Lucena urban gardeners, and patrons bringing reusable cups receive ₱15 off.</p>
             </div>
-            <div class="value-item">
-              <span class="value-check" aria-hidden="true">&#10003;</span>
-              <div>
-                <strong>Welcoming Creative Space:</strong> High-speed optical Wi-Fi, ample power outlets, and naturally lit seating.
-              </div>
+            <div class="pillar-item">
+              <h3 class="pillar-title">Welcoming Work Sanctuary</h3>
+              <p class="pillar-text">Equipped with reliable optical fiber Wi-Fi, accessible power outlets at every booth, and comfortable wooden seating.</p>
             </div>
           </div>
         </div>
@@ -146,39 +149,38 @@
     <section class="features-section" id="features">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">The Kape Point Standard</span>
-          <h2 class="section-title">Craftsmanship in Every Detail</h2>
-          <p class="section-subtitle">We hold our brewing, baking, and space to the highest standard so your daily visit is always memorable.</p>
+          <h2 class="section-title">The Kape Point Craft</h2>
+          <p class="section-subtitle">A disciplined approach to green bean sourcing, temperature-calibrated brewing, and daily sourdough baking.</p>
         </div>
 
         <div class="features-grid">
           <article class="feature-card">
             <div class="feature-icon-wrapper">
-              <img src="./assets/feature-beans.svg" alt="Single origin highland beans" class="feature-icon" width="80" height="80">
+              <img src="./assets/feature-beans.svg" alt="Single-origin highland coffee beans" class="feature-icon" width="64" height="64">
             </div>
-            <h3 class="feature-title">Single-Origin Roast</h3>
+            <h3 class="feature-title">Micro-Batch Roasting</h3>
             <p class="feature-description">
-              Hand-sorted Arabica, Robusta, and Liberica beans roasted light to medium to highlight natural floral and chocolate profiles.
+              Roasted in 5kg micro-batches to develop distinct origin flavors: floral bergamot, dark cacao, and brown sugar sweetness without harsh bitterness.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon-wrapper">
-              <img src="./assets/feature-barista.svg" alt="Precision barista brewing" class="feature-icon" width="80" height="80">
+              <img src="./assets/feature-barista.svg" alt="Precision barista extraction" class="feature-icon" width="64" height="64">
             </div>
-            <h3 class="feature-title">Precision Extraction</h3>
+            <h3 class="feature-title">Calibrated Extraction</h3>
             <p class="feature-description">
-              Calibrated TDS refractometry and temperature profiling ensure optimal balance, sweetness, and clarity in every extraction.
+              Every shot is dialed in each morning using digital TDS refractometry and precise 9-bar pressure curves for smooth, repeatable cup clarity.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon-wrapper">
-              <img src="./assets/feature-space.svg" alt="Cozy work-friendly seating" class="feature-icon" width="80" height="80">
+              <img src="./assets/feature-space.svg" alt="Community workspace seating" class="feature-icon" width="64" height="64">
             </div>
-            <h3 class="feature-title">Community Workspace</h3>
+            <h3 class="feature-title">Quiet Work Space</h3>
             <p class="feature-description">
-              Ergonomic solid wood tables, fast reliable Wi-Fi, quiet ambient jazz, and accessible power points at every booth.
+              A balanced ambient environment designed for productivity, study sessions, reading, and thoughtful conversations without loud distractions.
             </p>
           </article>
         </div>
@@ -189,9 +191,8 @@
     <section class="menu-section" id="menu">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Fresh Daily Offerings</span>
-          <h2 class="section-title">Signature Menu &amp; Pricing</h2>
-          <p class="section-subtitle">Select a category below to explore our seasonal coffee offerings, refreshing cold signatures, and artisan baked goods.</p>
+          <h2 class="section-title">Seasonal Brews &amp; Artisan Bakes</h2>
+          <p class="section-subtitle">All drinks are prepared fresh to order. Filter by category below to explore our signature roasts, iced refreshers, and oven-fresh pastries.</p>
         </div>
 
         <!-- Interactive Category Filter Tabs -->
@@ -207,7 +208,7 @@
           <!-- Item 1 -->
           <article class="menu-card" data-category="espresso">
             <div class="menu-card-image">
-              <img src="./assets/menu-espresso.svg" alt="Highland Barako Double Espresso" width="160" height="160">
+              <img src="./assets/menu-espresso.svg" alt="Highland Barako Double Espresso" width="140" height="140">
               <span class="item-tag">Roaster Pick</span>
             </div>
             <div class="menu-card-content">
@@ -226,15 +227,15 @@
           <!-- Item 2 -->
           <article class="menu-card" data-category="espresso">
             <div class="menu-card-image">
-              <img src="./assets/menu-latte.svg" alt="Spanish Sea Salt Caramel Latte" width="160" height="160">
-              <span class="item-tag">Best Seller</span>
+              <img src="./assets/menu-latte.svg" alt="Spanish Sea Salt Caramel Latte" width="140" height="140">
+              <span class="item-tag">Customer Favorite</span>
             </div>
             <div class="menu-card-content">
               <div class="menu-card-header">
                 <h3 class="menu-item-name">Spanish Caramel Latte</h3>
                 <span class="menu-item-price">₱165</span>
               </div>
-              <p class="menu-item-desc">Slow-steamed oat milk, sweetened condensed milk drizzle, robust espresso, and a touch of Pangasinan sea salt.</p>
+              <p class="menu-item-desc">Steamed oat milk, sweetened condensed milk drizzle, robust espresso, and a touch of Pangasinan sea salt.</p>
               <div class="menu-card-footer">
                 <span class="ingredient-info">Hot or Iced / 350ml</span>
                 <button class="btn-text order-item-btn" data-name="Spanish Caramel Latte">Reserve Order</button>
@@ -245,15 +246,15 @@
           <!-- Item 3 -->
           <article class="menu-card" data-category="cold">
             <div class="menu-card-image">
-              <img src="./assets/menu-coldbrew.svg" alt="Signature 48-Hour Cold Brew" width="160" height="160">
-              <span class="item-tag">Signature</span>
+              <img src="./assets/menu-coldbrew.svg" alt="Signature 48-Hour Cold Brew" width="140" height="140">
+              <span class="item-tag">48-Hr Brew</span>
             </div>
             <div class="menu-card-content">
               <div class="menu-card-header">
                 <h3 class="menu-item-name">Slow Drip Cold Brew</h3>
                 <span class="menu-item-price">₱150</span>
               </div>
-              <p class="menu-item-desc">Immersion brewed for 48 hours under chilled temperatures. Silky mouthfeel with natural sweet plum and chocolate undertones.</p>
+              <p class="menu-item-desc">Immersion brewed for 48 hours under chilled temperatures. Silky mouthfeel with sweet stone fruit undertones.</p>
               <div class="menu-card-footer">
                 <span class="ingredient-info">Chilled / Low Acidity</span>
                 <button class="btn-text order-item-btn" data-name="Slow Drip Cold Brew">Reserve Order</button>
@@ -264,7 +265,7 @@
           <!-- Item 4 -->
           <article class="menu-card" data-category="cold">
             <div class="menu-card-image">
-              <img src="./assets/menu-matcha.svg" alt="Uji Ceremonial Matcha Fusion" width="160" height="160">
+              <img src="./assets/menu-matcha.svg" alt="Uji Ceremonial Matcha Fusion" width="140" height="140">
               <span class="item-tag">Non-Coffee</span>
             </div>
             <div class="menu-card-content">
@@ -283,15 +284,15 @@
           <!-- Item 5 -->
           <article class="menu-card" data-category="pastry">
             <div class="menu-card-image">
-              <img src="./assets/menu-pastry.svg" alt="Artisan Butter Croissant" width="160" height="160">
-              <span class="item-tag">Baked at 6 AM</span>
+              <img src="./assets/menu-pastry.svg" alt="Artisan Butter Croissant" width="140" height="140">
+              <span class="item-tag">Baked at 6:30 AM</span>
             </div>
             <div class="menu-card-content">
               <div class="menu-card-header">
                 <h3 class="menu-item-name">Flaky French Butter Croissant</h3>
                 <span class="menu-item-price">₱110</span>
               </div>
-              <p class="menu-item-desc">Layered with 100% French butter, fermented over 72 hours for an airy honeycomb crumb and golden caramelized exterior.</p>
+              <p class="menu-item-desc">Layered with French butter, fermented over 72 hours for an airy honeycomb crumb and golden caramelized crust.</p>
               <div class="menu-card-footer">
                 <span class="ingredient-info">Fresh Daily / French Butter</span>
                 <button class="btn-text order-item-btn" data-name="Flaky Butter Croissant">Reserve Order</button>
@@ -302,8 +303,8 @@
           <!-- Item 6 -->
           <article class="menu-card" data-category="pastry">
             <div class="menu-card-image">
-              <img src="./assets/menu-sandwich.svg" alt="Sourdough Deli Toastie" width="160" height="160">
-              <span class="item-tag">Hearty Bite</span>
+              <img src="./assets/menu-sandwich.svg" alt="Sourdough Deli Toastie" width="140" height="140">
+              <span class="item-tag">Warm Sourdough</span>
             </div>
             <div class="menu-card-content">
               <div class="menu-card-header">
@@ -319,28 +320,27 @@
           </article>
         </div>
 
-        <div class="menu-notice">
+        <div class="menu-notice-card">
           <p>
-            * All drinks can be customized with Oat Milk (+₱30), Almond Milk (+₱30), or extra espresso shot (+₱40). Dairy-free and sugar-free options available upon request.
+            Milk Substitutes: Oat Milk (+₱30) or Almond Milk (+₱30). Extra espresso shot (+₱40). Dairy-free and sugar-free options available upon request.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials / Community Reviews Section -->
+    <!-- Community Notes & Reviews Section -->
     <section class="reviews-section" id="reviews">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Community Voices</span>
-          <h2 class="section-title">Loved by Coffee Lovers &amp; Creators</h2>
-          <p class="section-subtitle">Real experiences from students, remote professionals, and neighborhood regulars.</p>
+          <h2 class="section-title">Community Notes &amp; Conversations</h2>
+          <p class="section-subtitle">Real experiences from students, remote professionals, and neighborhood regulars in Lucena City.</p>
         </div>
 
         <div class="reviews-grid">
           <article class="review-card">
             <div class="review-stars" aria-label="Rating: 5 out of 5 stars">★★★★★</div>
             <blockquote class="review-quote">
-              "The Spanish Caramel Latte is honestly the smoothest in town. The atmosphere is quiet enough to write code or study for hours, and the baristas genuinely know their beans."
+              "The Spanish Caramel Latte is hands down the smoothest coffee in town. The space is quiet enough to write code or study for hours, and the staff knows their coffee craft inside out."
             </blockquote>
             <div class="reviewer-meta">
               <div class="reviewer-avatar">JP</div>
@@ -354,7 +354,7 @@
           <article class="review-card">
             <div class="review-stars" aria-label="Rating: 5 out of 5 stars">★★★★★</div>
             <blockquote class="review-quote">
-              "Finding authentic Benguet Arabica brewed with this level of precision is rare. The butter croissant was delightfully flaky, fresh out of the oven around 8 AM."
+              "Finding single-origin Benguet Arabica brewed with this level of clarity in Quezon is rare. The butter croissant was delightfully flaky, fresh out of the oven around 8 AM."
             </blockquote>
             <div class="reviewer-meta">
               <div class="reviewer-avatar">MA</div>
@@ -368,7 +368,7 @@
           <article class="review-card">
             <div class="review-stars" aria-label="Rating: 5 out of 5 stars">★★★★★</div>
             <blockquote class="review-quote">
-              "Great lightning-fast Wi-Fi, accessible power outlets everywhere, and super accommodating staff. Our study group spent half the day here preparing for finals!"
+              "Reliable 300 Mbps Wi-Fi, accessible power outlets everywhere, and super accommodating baristas. Our project team spent half the day here preparing our thesis presentation."
             </blockquote>
             <div class="reviewer-meta">
               <div class="reviewer-avatar">RC</div>
@@ -386,17 +386,19 @@
     <section class="hours-section" id="hours">
       <div class="container hours-grid">
         <div class="hours-card">
-          <span class="section-tag">Plan Your Visit</span>
           <h2 class="section-title">Operating Hours</h2>
-          <p class="hours-intro">We are open 7 days a week for breakfast, work sessions, and evening catch-ups.</p>
+          <p class="hours-intro">We are open 7 days a week for morning coffee, daytime work sessions, and evening catch-ups.</p>
           
           <ul class="hours-list">
             <li class="hours-row">
-              <span class="day">Monday – Thursday</span>
+              <span class="day">Monday to Thursday</span>
               <span class="time">7:00 AM – 9:00 PM</span>
             </li>
             <li class="hours-row highlight-row">
-              <span class="day">Friday – Saturday</span>
+              <div class="day-with-badge">
+                <span class="day">Friday to Saturday</span>
+                <span class="schedule-badge">Extended Hours</span>
+              </div>
               <span class="time">7:00 AM – 10:30 PM</span>
             </li>
             <li class="hours-row">
@@ -407,13 +409,12 @@
 
           <div class="current-status" id="current-status-banner">
             <span class="status-indicator" id="status-dot"></span>
-            <span class="status-text" id="status-text">Checking live store status...</span>
+            <span class="status-text" id="status-text">Checking store status...</span>
           </div>
         </div>
 
         <div class="location-card">
-          <span class="section-tag">Find Us</span>
-          <h2 class="section-title">Location &amp; Amenities</h2>
+          <h2 class="section-title">Location &amp; Space Amenities</h2>
           <p class="location-address">
             <strong>Kape Point Cafe &amp; Roastery</strong><br>
             42 Rizal Avenue Corner Gomez St., Lucena City, Quezon 4301
@@ -421,31 +422,42 @@
 
           <div class="amenities-grid">
             <div class="amenity-item">
-              <span class="amenity-icon">📶</span>
+              <div class="amenity-icon-svg" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+              </div>
               <div>
-                <strong>300 Mbps Fiber</strong>
-                <p>Complimentary for all guests</p>
+                <strong>300 Mbps Optical Fiber</strong>
+                <p>Complimentary high-speed internet</p>
               </div>
             </div>
+
             <div class="amenity-item">
-              <span class="amenity-icon">🔌</span>
+              <div class="amenity-icon-svg" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"></path><path d="M7 8h10"></path><path d="M5 14h14v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-2z"></path><line x1="9" y1="2" x2="9" y2="8"></line><line x1="15" y1="2" x2="15" y2="8"></line></svg>
+              </div>
               <div>
-                <strong>Power Outlets</strong>
-                <p>Equipped at every table</p>
+                <strong>Power at Every Booth</strong>
+                <p>Standard plugs and USB charging ports</p>
               </div>
             </div>
+
             <div class="amenity-item">
-              <span class="amenity-icon">🚗</span>
+              <div class="amenity-icon-svg" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg>
+              </div>
               <div>
-                <strong>Customer Parking</strong>
-                <p>Secure curbside &amp; bike racks</p>
+                <strong>Curbside &amp; Bike Parking</strong>
+                <p>Monitored parking for bikes and cars</p>
               </div>
             </div>
+
             <div class="amenity-item">
-              <span class="amenity-icon">❄️</span>
+              <div class="amenity-icon-svg" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+              </div>
               <div>
-                <strong>Climate Controlled</strong>
-                <p>Cool, air-conditioned seating</p>
+                <strong>Climate-Controlled Space</strong>
+                <p>Quiet, cool air-conditioned seating</p>
               </div>
             </div>
           </div>
@@ -457,9 +469,8 @@
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Get in Touch</span>
           <h2 class="section-title">Send Us a Note or Inquiry</h2>
-          <p class="section-subtitle">Have a question about whole bean pre-orders, private event catering, or special dietary requirements? We would love to hear from you.</p>
+          <p class="section-subtitle">Have a question regarding whole bean orders, group workspace reservations, or private event catering? Drop us a message below.</p>
         </div>
 
         <div class="contact-grid">
@@ -468,16 +479,16 @@
             <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
 
             <div class="form-group">
-              <label for="contact-name">Full Name <span class="required">*</span></label>
-              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Maria Santos" required>
-              <span class="field-error" id="name-error"></span>
+              <label for="contact-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Maria Santos" required aria-describedby="name-error">
+              <span class="field-error" id="name-error" role="status"></span>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="contact-email">Email Address <span class="required">*</span></label>
-                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. maria@example.com" required>
-                <span class="field-error" id="email-error"></span>
+                <label for="contact-email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. maria@example.com" required aria-describedby="email-error">
+                <span class="field-error" id="email-error" role="status"></span>
               </div>
               <div class="form-group">
                 <label for="contact-phone">Phone Number</label>
@@ -486,21 +497,21 @@
             </div>
 
             <div class="form-group">
-              <label for="contact-subject">Topic of Inquiry <span class="required">*</span></label>
-              <select id="contact-subject" name="subject" class="form-select" required>
+              <label for="contact-subject">Topic of Inquiry <span class="required" aria-hidden="true">*</span></label>
+              <select id="contact-subject" name="subject" class="form-select" required aria-describedby="subject-error">
                 <option value="">Select a topic...</option>
                 <option value="catering">Private Event / Bulk Catering</option>
                 <option value="beans">Whole Bean Wholesale Inquiry</option>
                 <option value="feedback">Store Feedback &amp; Suggestions</option>
                 <option value="other">General Question</option>
               </select>
-              <span class="field-error" id="subject-error"></span>
+              <span class="field-error" id="subject-error" role="status"></span>
             </div>
 
             <div class="form-group">
-              <label for="contact-message">Your Message <span class="required">*</span></label>
-              <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="How can our team help you?" required></textarea>
-              <span class="field-error" id="message-error"></span>
+              <label for="contact-message">Your Message <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="How can our team help you?" required aria-describedby="message-error"></textarea>
+              <span class="field-error" id="message-error" role="status"></span>
             </div>
 
             <button type="submit" class="btn btn-primary btn-block" id="submit-contact-btn">Send Message</button>
@@ -509,7 +520,9 @@
           <!-- Direct Contact Information Cards -->
           <div class="contact-cards">
             <div class="info-card">
-              <div class="info-icon">📞</div>
+              <div class="info-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
               <div class="info-body">
                 <h3>Call or Text Us</h3>
                 <p class="info-val">+63 (042) 710-8924</p>
@@ -518,7 +531,9 @@
             </div>
 
             <div class="info-card">
-              <div class="info-icon">✉️</div>
+              <div class="info-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
               <div class="info-body">
                 <h3>Direct Email</h3>
                 <p class="info-val">hello@kapepointcafe.ph</p>
@@ -527,19 +542,23 @@
             </div>
 
             <div class="info-card">
-              <div class="info-icon">📍</div>
+              <div class="info-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
               <div class="info-body">
-                <h3>Main Cafe &amp; Roastery</h3>
+                <h3>Cafe &amp; Roastery</h3>
                 <p class="info-val">42 Rizal Ave., Lucena City</p>
-                <p class="info-sub">Quezon Province, Philippines</p>
+                <p class="info-sub">Quezon Province, 4301</p>
               </div>
             </div>
 
-            <div class="info-card special-notice">
-              <div class="info-icon">☕</div>
+            <div class="info-card reward-card">
+              <div class="info-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              </div>
               <div class="info-body">
-                <h3>Bring Your Own Tumbler</h3>
-                <p class="info-sub">Get <strong>₱15 off</strong> any handcrafted coffee when you bring your reusable travel mug.</p>
+                <h3>Reusable Tumbler Discount</h3>
+                <p class="info-sub">Receive <strong>₱15 off</strong> any handcrafted coffee when you bring your personal travel tumbler.</p>
               </div>
             </div>
           </div>
@@ -548,7 +567,7 @@
     </section>
   </main>
 
-  <!-- Interactive Component: Table Reservation & Order Modal -->
+  <!-- Interactive Modal Component: Table Reservation Dialog -->
   <div class="modal-backdrop" id="reservation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal-container">
       <div class="modal-header">
@@ -559,17 +578,17 @@
         <div class="modal-feedback" id="modal-feedback" role="alert" aria-live="polite"></div>
 
         <div class="form-group">
-          <label for="res-name">Your Full Name <span class="required">*</span></label>
+          <label for="res-name">Your Full Name <span class="required" aria-hidden="true">*</span></label>
           <input type="text" id="res-name" class="form-input" placeholder="e.g. Juan Dela Cruz" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="res-phone">Phone / Viber <span class="required">*</span></label>
+            <label for="res-phone">Phone / Viber <span class="required" aria-hidden="true">*</span></label>
             <input type="tel" id="res-phone" class="form-input" placeholder="0917 123 4567" required>
           </div>
           <div class="form-group">
-            <label for="res-guests">Number of Guests <span class="required">*</span></label>
+            <label for="res-guests">Number of Guests <span class="required" aria-hidden="true">*</span></label>
             <select id="res-guests" class="form-select" required>
               <option value="1">1 Person (Solo Workspace)</option>
               <option value="2" selected>2 Persons</option>
@@ -582,18 +601,18 @@
 
         <div class="form-row">
           <div class="form-group">
-            <label for="res-date">Preferred Date <span class="required">*</span></label>
+            <label for="res-date">Preferred Date <span class="required" aria-hidden="true">*</span></label>
             <input type="date" id="res-date" class="form-input" required>
           </div>
           <div class="form-group">
-            <label for="res-time">Preferred Time <span class="required">*</span></label>
+            <label for="res-time">Preferred Time <span class="required" aria-hidden="true">*</span></label>
             <input type="time" id="res-time" class="form-input" required>
           </div>
         </div>
 
         <div class="form-group">
           <label for="res-notes">Selected Item / Special Requests</label>
-          <input type="text" id="res-notes" class="form-input" placeholder="e.g. Near power socket, quiet corner, pre-order Spanish Latte">
+          <input type="text" id="res-notes" class="form-input" placeholder="e.g. Near window, quiet corner, pre-order Spanish Latte">
         </div>
 
         <div class="modal-actions">
@@ -608,42 +627,54 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="./assets/logo.svg" alt="Kape Point Cafe Logo" class="footer-logo" width="160" height="40">
+        <!-- Reusable Inline SVG Logo for Footer -->
+        <svg class="brand-logo-svg footer-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 56" width="180" height="42" fill="none" aria-hidden="true">
+          <g transform="translate(6, 6)">
+            <circle cx="22" cy="22" r="21" fill="var(--color-accent)" fill-opacity="0.15" stroke="var(--color-accent)" stroke-width="1.75"/>
+            <path d="M14 26 C14 16, 30 16, 30 26 C30 33, 14 33, 14 26 Z" fill="var(--color-primary-mark)"/>
+            <path d="M18 20 C22 24, 22 28, 26 32" stroke="var(--color-bg)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M18 12 C18 9, 21 8, 20 5" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M24 13 C24 10, 27 9, 26 6" stroke="var(--color-accent)" stroke-width="1.6" stroke-linecap="round"/>
+          </g>
+          <text x="64" y="29" font-family="Georgia, serif" font-size="21" font-weight="600" fill="var(--color-text)">Kape Point</text>
+          <text x="64" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" letter-spacing="2" fill="var(--color-accent)">ARTISAN CAFE &amp; ROASTERY</text>
+        </svg>
+
         <p class="footer-tagline">
-          Cultivating community, single-origin pride, and cozy spaces one handcrafted cup at a time.
+          Single-origin pride, seasonal roasting, and quiet community workspaces in Lucena City.
         </p>
-        <p class="footer-credit">Handcrafted with care for STI Lucena - Agentic Engineering 101.</p>
+        <p class="footer-credit">Laboratory Project: STI College Lucena • Agentic Engineering 101.</p>
       </div>
 
       <div class="footer-nav">
-        <h4 class="footer-heading">Quick Navigation</h4>
+        <h3 class="footer-heading">Navigation</h3>
         <ul class="footer-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">Our Story</a></li>
-          <li><a href="#features">Our Craft</a></li>
+          <li><a href="#features">The Craft</a></li>
           <li><a href="#menu">Menu &amp; Pricing</a></li>
-          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#reviews">Community</a></li>
           <li><a href="#contact">Contact &amp; Reserve</a></li>
         </ul>
       </div>
 
       <div class="footer-hours">
-        <h4 class="footer-heading">Daily Schedule</h4>
-        <p>Mon – Thu: 7:00 AM – 9:00 PM</p>
-        <p>Fri – Sat: 7:00 AM – 10:30 PM</p>
+        <h3 class="footer-heading">Store Hours</h3>
+        <p>Mon to Thu: 7:00 AM – 9:00 PM</p>
+        <p>Fri to Sat: 7:00 AM – 10:30 PM</p>
         <p>Sun: 8:00 AM – 8:00 PM</p>
-        <p class="footer-note">Free Wi-Fi &amp; power outlets for all patrons.</p>
+        <p class="footer-note">Complimentary 300 Mbps Wi-Fi for all guests.</p>
       </div>
 
       <div class="footer-social">
-        <h4 class="footer-heading">Follow Us</h4>
-        <p>Stay updated with our weekly seasonal beans and newly baked pastries.</p>
+        <h3 class="footer-heading">Social Updates</h3>
+        <p>Follow our weekly roasting schedule and pastry specials.</p>
         <div class="social-links">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.2 22 12z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.2 22 12z"/></svg>
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
@@ -652,7 +683,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; 2026 Kape Point Cafe &amp; Roastery. All rights reserved.</p>
-        <p class="footer-legal">Designed with Plain HTML5, CSS3, &amp; Vanilla JavaScript.</p>
+        <p class="footer-legal">Semantic HTML5 • CSS3 Custom Properties • Vanilla ES6+ JavaScript</p>
       </div>
     </div>
   </footer>

@@ -1,0 +1,25 @@
+{
+  "desktop": {
+    "hasOverflow": false,
+    "truncationCount": 0,
+    "truncations": []
+  },
+  "laptop": {
+    "hasOverflow": false,
+    "truncationCount": 0,
+    "truncations": []
+  },
+  "tablet": {
+    "hasOverflow": false,
+    "touchTargetViolations": 0
+  },
+  "mobile": {
+    "hasOverflow": false,
+    "touchViolationsCount": 0,
+    "touchViolations": []
+  },
+  "fontViolations": {
+    "count": 0,
+    "violations": []
+  }
+}
